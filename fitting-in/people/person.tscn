@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bs02j5ybgumyu"]
+
+[ext_resource type="Script" uid="uid://b2gqy3upn2kg4" path="res://people/scripts/person.gd" id="1_303gn"]
+[ext_resource type="Texture2D" uid="uid://kmrrub2yc87s" path="res://icon.svg" id="1_l7mqu"]
+
+[node name="Person" type="Node2D" unique_id=67439441 node_paths=PackedStringArray("head_anchor", "hair_anchor", "hat_anchor", "shirt_anchor", "hold_anchor")]
+script = ExtResource("1_303gn")
+head_anchor = NodePath("Head")
+hair_anchor = NodePath("Hair")
+hat_anchor = NodePath("Hat")
+shirt_anchor = NodePath("Shirt")
+hold_anchor = NodePath("Hold")
+
+[node name="Neck" type="Node2D" parent="." unique_id=1543448421]
+position = Vector2(-1, -87)
+
+[node name="Hair" type="Node2D" parent="." unique_id=1677138840]
+position = Vector2(0, -136)
+
+[node name="Head" type="Node2D" parent="." unique_id=407866713]
+position = Vector2(0, -136)
+
+[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=1162269]
+texture = ExtResource("1_l7mqu")
+
+[node name="Hat" type="Node2D" parent="." unique_id=1910772692]
+position = Vector2(0, -199)
+
+[node name="Sprite2D" type="Sprite2D" parent="Hat" unique_id=312309165]
+position = Vector2(1, 0)
+scale = Vector2(0.5599996, 0.19999999)
+texture = ExtResource("1_l7mqu")
+
+[node name="Shirt" type="Node2D" parent="." unique_id=1632560326]
+position = Vector2(-1, -45)
+
+[node name="Sprite2D" type="Sprite2D" parent="Shirt" unique_id=861786342]
+texture = ExtResource("1_l7mqu")
+
+[node name="Hold" type="Node2D" parent="." unique_id=926230128]
+position = Vector2(0, -42)

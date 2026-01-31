@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bta5ndxrb6cfk"]
+
+[ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://people/player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" path="res://group.gd" id="2_0xm2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(39, 597.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
+radius = 172.28465
+
+[node name="main" type="Node2D" unique_id=834257654]
+y_sort_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=843127577]
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1654547717]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=227369478]
+position = Vector2(526, 8.25)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Player" parent="." unique_id=1015663847 instance=ExtResource("1_ig7tw")]
+position = Vector2(1, 0)
+
+[node name="Group" type="Node2D" parent="." unique_id=330583348]
+script = ExtResource("2_0xm2m")
+
+[node name="Area2D" type="Area2D" parent="Group" unique_id=1853598212]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Group/Area2D" unique_id=1509867443]
+position = Vector2(-312, 0)
+shape = SubResource("CircleShape2D_0xm2m")
