@@ -1,6 +1,6 @@
 class_name RandomAccessory extends BaseAccessory
 
-@export var prefabs : Array[PackedScene]
+@export var prefabs : Array[Accessory]
 @export var type : AccessoryType
 
 func get_prefab():
