@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RandomAccessory" format=3 uid="uid://bex2t44mxg17w"]
+
+[ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="1_i2xnn"]
+[ext_resource type="Script" uid="uid://be50pyx4xejjd" path="res://outfits/scripts/random_accessory.gd" id="2_pxxvs"]
+[ext_resource type="Resource" uid="uid://qrs7sxjv6kxj" path="res://outfits/scenes/shirt/shirt1.tres" id="2_qxewy"]
+
+[resource]
+script = ExtResource("2_pxxvs")
+prefabs = Array[ExtResource("1_i2xnn")]([ExtResource("2_qxewy")])
+metadata/_custom_type_script = "uid://be50pyx4xejjd"
