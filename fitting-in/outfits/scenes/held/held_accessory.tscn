@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://jqet84nmrr2h"]
+
+[ext_resource type="PackedScene" uid="uid://d06jaodnfrjhh" path="res://outfits/scenes/body_offset.tscn" id="1_pumye"]
+
+[node name="body_accessory" unique_id=550483700 instance=ExtResource("1_pumye")]
+
+[node name="held" type="Sprite2D" parent="offset" parent_id_path=PackedInt32Array(1241458596) index="0" unique_id=1433749656]
+z_index = 6

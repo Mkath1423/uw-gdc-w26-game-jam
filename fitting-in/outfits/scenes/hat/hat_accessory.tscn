@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://diix8o4k50iq3"]
+
+[ext_resource type="PackedScene" uid="uid://butx7mth5uv72" path="res://outfits/scenes/head_offset.tscn" id="1_lfl67"]
+
+[node name="head_accessory" unique_id=550483700 instance=ExtResource("1_lfl67")]
+
+[node name="accessory" type="Sprite2D" parent="offset" parent_id_path=PackedInt32Array(1241458596) index="0" unique_id=1889410262]
+z_index = 6

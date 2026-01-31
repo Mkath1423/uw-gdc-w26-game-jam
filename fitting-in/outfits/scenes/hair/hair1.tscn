@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://tx7qk7s3c37t"]
+[gd_scene format=3 uid="uid://d0qqagfvqvpna"]
 
-[ext_resource type="Texture2D" uid="uid://dygq8xmqiffpw" path="res://sprites/hair_short_1.png" id="1_warkq"]
+[ext_resource type="PackedScene" uid="uid://cbqpc2vlvplb3" path="res://outfits/scenes/hair/hair_accessory.tscn" id="1_lbvog"]
+[ext_resource type="Texture2D" uid="uid://dygq8xmqiffpw" path="res://sprites/hair_short_1.png" id="2_5byfv"]
 
-[node name="Sprite2D2" type="Sprite2D" unique_id=1487839218]
-position = Vector2(6, 80)
-texture = ExtResource("1_warkq")
+[node name="head_accessory" unique_id=550483700 instance=ExtResource("1_lbvog")]
+
+[node name="front" parent="offset" parent_id_path=PackedInt32Array(1241458596) index="1" unique_id=435832870]
+texture = ExtResource("2_5byfv")
