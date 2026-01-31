@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	GameState.player_stress.stress_updated.connect(on_stress_changed)
-	GameState.player_inventoy.outfit_changed.connect(on_outfit_changed)
+	GameState.player_inventory.outfit_changed.connect(on_outfit_changed)
 
 func _physics_process(delta: float) -> void:
 	var input_dir = Vector2(
