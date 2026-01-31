@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://du54himqbpbx1"]
 
-[ext_resource type="Script" uid="uid://bxwbsddema61a" path="res://player.gd" id="1_vlk2o"]
+[ext_resource type="Script" uid="uid://bv70dxbiq5wnv" path="res://people/scripts/player.gd" id="1_vlk2o"]
 [ext_resource type="PackedScene" uid="uid://bs02j5ybgumyu" path="res://people/person.tscn" id="2_ilric"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
@@ -9,9 +9,9 @@ size = Vector2(127, 55)
 [node name="Player" type="CharacterBody2D" unique_id=1015663847]
 collision_layer = 2
 script = ExtResource("1_vlk2o")
-base_speed = 500.0
-accel = 2000.0
-stopping = 1000.0
+base_speed = 2000.0
+accel = 3000.0
+stopping = 3000.0
 
 [node name="Person" parent="." unique_id=67439441 instance=ExtResource("2_ilric")]
 y_sort_enabled = true

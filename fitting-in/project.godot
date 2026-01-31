@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="fitting-in"
-run/main_scene="uid://bta5ndxrb6cfk"
+run/main_scene="uid://do5e81566ncr4"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameState="*uid://boywvje37qi7d"
+SceneManager="*uid://cmy6tb5fk2bel"
 
 [input]
 
