@@ -7,7 +7,6 @@ var levels : Array[PackedScene] = [
 
 var current_level = 0
 
-
 func _ready():
 	GameState.reset()
 	load_current_level()

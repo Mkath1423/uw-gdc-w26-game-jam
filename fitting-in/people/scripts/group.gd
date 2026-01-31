@@ -1,9 +1,11 @@
 extends Node2D
 
 @export var stress_rate : float = 10
+
 @export var hat : BaseAccessory
 @export var shirt : BaseAccessory
 @export var held : BaseAccessory
+
 var randomHat = load("res://outfits/scenes/hat/random_hat.tres")
 var randomShirt = load("res://outfits/scenes/shirt/random_shirt.tres")
 var randomHeld = load("res://outfits/scenes/held/random_held.tres")
@@ -18,15 +20,15 @@ func _ready():
 # All player accessories must match group accessories,
 # except for random group accessories
 func player_inventory_matches() -> bool:
-	if (GameState.player_inventory.hats.get_accessory() != hat
+	if (GameState.player_inventory.hats.get_current() != hat
 	and hat != randomHat):
 		return false
 	
-	if (GameState.player_inventory.shirts.get_accessory() != shirt
+	if (GameState.player_inventory.shirts.get_current() != shirt
 	and shirt != randomShirt):
 		return false
 	
-	if (GameState.player_inventory.helds.get_accessory() != held
+	if (GameState.player_inventory.helds.get_current() != held
 	and held != randomHeld):
 		return false
 	

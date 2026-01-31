@@ -4,3 +4,5 @@
 
 [node name="Game" type="Node2D" unique_id=2145803963]
 script = ExtResource("1_jnguy")
+
+[node name="Level" type="Node" parent="." unique_id=759549222]

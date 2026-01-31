@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bta5ndxrb6cfk"]
 
-[ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://people/player.tscn" id="1_s0xps"]
+[ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="1_s0xps"]
 [ext_resource type="PackedScene" uid="uid://34poimboyebg" path="res://ui/outfit_selector/outfit_selector.tscn" id="2_gbsl3"]
+[ext_resource type="PackedScene" path="res://levels/testing/test_group.tscn" id="2_o7ecn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(39, 597.5)
@@ -32,6 +33,9 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Group/Area2D" unique_id=1509867443]
 position = Vector2(-312, 0)
 shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Group2" parent="." unique_id=1066614569 instance=ExtResource("2_o7ecn")]
+position = Vector2(-556, 550)
 
 [node name="ui_root" type="Control" parent="." unique_id=1801981520]
 layout_mode = 3
