@@ -29,7 +29,7 @@ func set_accessory(accessory : BaseAccessory):
 		_:
 			pass
 
-func set_facing(dir : Vector2):
+func set_facing(_dir : Vector2):
 	pass
 	# if dir.y < 0:
 	#     head_anchor.z_index = 0

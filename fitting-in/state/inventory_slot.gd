@@ -7,9 +7,9 @@ var current : int = -1
 	
 func set_current(i, rel):
 	current = (i + current) if rel else i
-	current %= accessories.size()
+	current = posmod(current, accessories.size())
 	
-func get_accessory(type : BaseAccessory.AccessoryType):
+func get_current():
 	if current < 0 or current >= accessories.size():
 		return null
 		

@@ -1,22 +1,51 @@
 [gd_scene format=3 uid="uid://d3t171i1ujoch"]
 
 [ext_resource type="Script" uid="uid://crkwf2hbwxjmo" path="res://ui/outfit_selector/slot_selector.gd" id="1_0rw3t"]
-[ext_resource type="Texture2D" uid="uid://kmrrub2yc87s" path="res://icon.svg" id="1_agl2j"]
+[ext_resource type="Texture2D" uid="uid://dvyc6sogxacv2" path="res://sprites/ui/arrow_left.png" id="2_s3c8q"]
+[ext_resource type="Texture2D" uid="uid://c74gl3kscnixy" path="res://sprites/ui/background-panel.png" id="3_gov0x"]
+[ext_resource type="Texture2D" uid="uid://dokmcs5x0e4ix" path="res://sprites/head_base.png" id="3_s3c8q"]
+[ext_resource type="Texture2D" uid="uid://btdolonr2rmnp" path="res://sprites/ui/arrow_right.png" id="4_gov0x"]
 
 [node name="slot_selector" type="HBoxContainer" unique_id=2133742375]
+alignment = 1
 script = ExtResource("1_0rw3t")
 
 [node name="left" type="TextureButton" parent="." unique_id=786201201]
 layout_mode = 2
-texture_normal = ExtResource("1_agl2j")
+texture_normal = ExtResource("2_s3c8q")
+texture_pressed = ExtResource("2_s3c8q")
+texture_hover = ExtResource("2_s3c8q")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=750514907]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2005007779]
 layout_mode = 2
-texture = ExtResource("1_agl2j")
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="panel" type="TextureRect" parent="MarginContainer" unique_id=1409548836]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_gov0x")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/panel" unique_id=516792236]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/panel/CenterContainer" unique_id=750514907]
+layout_mode = 2
+texture = ExtResource("3_s3c8q")
+stretch_mode = 4
 
 [node name="right" type="TextureButton" parent="." unique_id=1689162581]
 layout_mode = 2
-texture_normal = ExtResource("1_agl2j")
+texture_normal = ExtResource("4_gov0x")
+texture_pressed = ExtResource("4_gov0x")
+texture_hover = ExtResource("4_gov0x")
+flip_v = true
 
 [connection signal="pressed" from="left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="right" to="." method="_on_right_pressed"]
