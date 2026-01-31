@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bujenxapoax2n"]
+
+[ext_resource type="Script" uid="uid://dnla2gsrd5vk" path="res://people/scripts/group.gd" id="1_g1fwg"]
+[ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="1_vy4a6"]
+
+[node name="Group" type="Node2D" unique_id=1066614569]
+script = ExtResource("1_g1fwg")
+
+[node name="PlayerDetect" parent="." unique_id=1675569352 instance=ExtResource("1_vy4a6")]
