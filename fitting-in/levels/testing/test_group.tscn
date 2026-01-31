@@ -31,3 +31,6 @@ metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
 position = Vector2(-33, 110)
 script = ExtResource("3_nlvp2")
 metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+
+[connection signal="player_enter" from="PlayerDetect" to="." method="_on_player_detect_player_enter"]
+[connection signal="player_exit" from="PlayerDetect" to="." method="_on_player_detect_player_exit"]
