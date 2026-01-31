@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://tx7qk7s3c37t"]
+
+[ext_resource type="Texture2D" uid="uid://dygq8xmqiffpw" path="res://sprites/hair_short_1.png" id="1_warkq"]
+
+[node name="Sprite2D2" type="Sprite2D" unique_id=1487839218]
+position = Vector2(6, 80)
+texture = ExtResource("1_warkq")

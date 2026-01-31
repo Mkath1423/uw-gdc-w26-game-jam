@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlayerInventory" format=3 uid="uid://yecgcss5i2y2"]
+
+[ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="1_oqufh"]
+[ext_resource type="Script" uid="uid://b5megc44v63ji" path="res://state/inventory.gd" id="2_xng3u"]
+
+[resource]
+script = ExtResource("2_xng3u")
+metadata/_custom_type_script = "uid://b5megc44v63ji"

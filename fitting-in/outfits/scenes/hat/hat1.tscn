@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d0ixhd0np712d"]
+
+[ext_resource type="Texture2D" uid="uid://0je1wpb5un75" path="res://sprites/acc_headphones_1.png" id="1_1du37"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=468560947]
+position = Vector2(6, 80)
+texture = ExtResource("1_1du37")
