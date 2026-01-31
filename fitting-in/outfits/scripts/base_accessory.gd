@@ -1,14 +1,14 @@
 class_name BaseAccessory extends Resource
 
 enum AccessoryType {
-    Hat,
-    Hair,
-    Shirt,
-    Held
+	Hat,
+	Hair,
+	Shirt,
+	Held
 }
 
 func get_prefab():
-    pass
+	pass
 
 func get_type():
-    pass
+	pass

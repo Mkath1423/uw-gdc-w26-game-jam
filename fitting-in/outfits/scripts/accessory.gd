@@ -1,5 +1,7 @@
 class_name Accessory extends BaseAccessory
 
+@export var icon : Texture2D
+
 @export var prefab : PackedScene
 @export var type : AccessoryType
 

@@ -1,41 +1,33 @@
 [gd_scene format=3 uid="uid://bs02j5ybgumyu"]
 
 [ext_resource type="Script" uid="uid://b2gqy3upn2kg4" path="res://people/scripts/person.gd" id="1_303gn"]
-[ext_resource type="Texture2D" uid="uid://kmrrub2yc87s" path="res://icon.svg" id="1_l7mqu"]
+[ext_resource type="PackedScene" uid="uid://dk6qjqv42okft" path="res://outfits/scenes/shirt/shirt1.tscn" id="2_j7e3k"]
+[ext_resource type="PackedScene" uid="uid://21cljx5iw3lt" path="res://outfits/scenes/head/head1.tscn" id="3_s4xmb"]
 
 [node name="Person" type="Node2D" unique_id=67439441 node_paths=PackedStringArray("head_anchor", "hair_anchor", "hat_anchor", "shirt_anchor", "hold_anchor")]
 script = ExtResource("1_303gn")
-head_anchor = NodePath("Head")
-hair_anchor = NodePath("Hair")
-hat_anchor = NodePath("Hat")
+head_anchor = NodePath("head_anchor/Head")
+hair_anchor = NodePath("head_anchor/Hair")
+hat_anchor = NodePath("head_anchor/Hat")
 shirt_anchor = NodePath("Shirt")
 hold_anchor = NodePath("Hold")
 
 [node name="Neck" type="Node2D" parent="." unique_id=1543448421]
-position = Vector2(-1, -87)
-
-[node name="Hair" type="Node2D" parent="." unique_id=1677138840]
-position = Vector2(0, -136)
-
-[node name="Head" type="Node2D" parent="." unique_id=407866713]
-position = Vector2(0, -136)
-
-[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=1162269]
-texture = ExtResource("1_l7mqu")
-
-[node name="Hat" type="Node2D" parent="." unique_id=1910772692]
-position = Vector2(0, -199)
-
-[node name="Sprite2D" type="Sprite2D" parent="Hat" unique_id=312309165]
-position = Vector2(1, 0)
-scale = Vector2(0.5599996, 0.19999999)
-texture = ExtResource("1_l7mqu")
+position = Vector2(0, -141)
 
 [node name="Shirt" type="Node2D" parent="." unique_id=1632560326]
-position = Vector2(-1, -45)
 
-[node name="Sprite2D" type="Sprite2D" parent="Shirt" unique_id=861786342]
-texture = ExtResource("1_l7mqu")
+[node name="body_accessory" parent="Shirt" unique_id=550483700 instance=ExtResource("2_j7e3k")]
+
+[node name="head_anchor" type="Node2D" parent="." unique_id=830305045]
+position = Vector2(-1, -190)
+
+[node name="Hair" type="Node2D" parent="head_anchor" unique_id=1677138840]
+
+[node name="Head" type="Node2D" parent="head_anchor" unique_id=407866713]
+
+[node name="head_accessory" parent="head_anchor/Head" unique_id=1422147221 instance=ExtResource("3_s4xmb")]
+
+[node name="Hat" type="Node2D" parent="head_anchor" unique_id=1910772692]
 
 [node name="Hold" type="Node2D" parent="." unique_id=926230128]
-position = Vector2(0, -42)

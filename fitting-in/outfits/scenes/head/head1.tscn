@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://21cljx5iw3lt"]
+
+[ext_resource type="Texture2D" uid="uid://dokmcs5x0e4ix" path="res://sprites/head_base.png" id="1_0m6nx"]
+[ext_resource type="PackedScene" uid="uid://butx7mth5uv72" path="res://outfits/scenes/head_offset.tscn" id="1_04255"]
+
+[node name="head_accessory" unique_id=550483700 instance=ExtResource("1_04255")]
+
+[node name="Sprite2D" type="Sprite2D" parent="offset" parent_id_path=PackedInt32Array(1241458596) index="0" unique_id=1148158803]
+z_index = 4
+texture = ExtResource("1_0m6nx")

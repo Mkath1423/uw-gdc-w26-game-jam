@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bujenxapoax2n"]
+
+[ext_resource type="Script" uid="uid://dnla2gsrd5vk" path="res://people/scripts/group.gd" id="1_uqn4f"]
+[ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="2_6jp05"]
+[ext_resource type="Script" uid="uid://b2gqy3upn2kg4" path="res://people/scripts/person.gd" id="3_nlvp2"]
+
+[node name="Group" type="Node2D" unique_id=1066614569]
+script = ExtResource("1_uqn4f")
+
+[node name="PlayerDetect" parent="." unique_id=1675569352 instance=ExtResource("2_6jp05")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDetect" unique_id=658550186]
+polygon = PackedVector2Array(89, 179, -85, 177, -369, -39, -160, -147, -16, -259, 402, -15)
+
+[node name="Person" type="Node2D" parent="." unique_id=1369749372]
+position = Vector2(-276, -39)
+script = ExtResource("3_nlvp2")
+metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+
+[node name="Person2" type="Node2D" parent="." unique_id=2436771]
+position = Vector2(197, -12)
+script = ExtResource("3_nlvp2")
+metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+
+[node name="Person3" type="Node2D" parent="." unique_id=2059521810]
+position = Vector2(-9, -172)
+script = ExtResource("3_nlvp2")
+metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+
+[node name="Person4" type="Node2D" parent="." unique_id=404350608]
+position = Vector2(-33, 110)
+script = ExtResource("3_nlvp2")
+metadata/_custom_type_script = "uid://b2gqy3upn2kg4"

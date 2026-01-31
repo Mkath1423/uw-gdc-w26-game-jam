@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PlayerStress" format=3 uid="uid://bg334d4hvp1y5"]
+
+[ext_resource type="Script" uid="uid://dhmjulc0orom" path="res://state/player_stress.gd" id="1_6i6js"]
+
+[resource]
+script = ExtResource("1_6i6js")
+metadata/_custom_type_script = "uid://dhmjulc0orom"

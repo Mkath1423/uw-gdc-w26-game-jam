@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d3t171i1ujoch"]
 
+[ext_resource type="Script" uid="uid://crkwf2hbwxjmo" path="res://ui/outfit_selector/slot_selector.gd" id="1_0rw3t"]
 [ext_resource type="Texture2D" uid="uid://kmrrub2yc87s" path="res://icon.svg" id="1_agl2j"]
 
 [node name="slot_selector" type="HBoxContainer" unique_id=2133742375]
+script = ExtResource("1_0rw3t")
 
 [node name="left" type="TextureButton" parent="." unique_id=786201201]
 layout_mode = 2
@@ -15,3 +17,6 @@ texture = ExtResource("1_agl2j")
 [node name="right" type="TextureButton" parent="." unique_id=1689162581]
 layout_mode = 2
 texture_normal = ExtResource("1_agl2j")
+
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]

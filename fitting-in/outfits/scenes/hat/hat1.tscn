@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d0ixhd0np712d"]
+
+[ext_resource type="Texture2D" uid="uid://0je1wpb5un75" path="res://sprites/acc_headphones_1.png" id="1_1du37"]
+[ext_resource type="PackedScene" uid="uid://diix8o4k50iq3" path="res://outfits/scenes/hat/hat_accessory.tscn" id="1_qlnsx"]
+
+[node name="head_accessory" unique_id=550483700 instance=ExtResource("1_qlnsx")]
+
+[node name="accessory" parent="offset" parent_id_path=PackedInt32Array(1241458596) index="0" unique_id=1889410262]
+texture = ExtResource("1_1du37")
