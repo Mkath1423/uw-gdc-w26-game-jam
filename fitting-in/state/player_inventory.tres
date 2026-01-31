@@ -1,8 +1,30 @@
 [gd_resource type="Resource" script_class="PlayerInventory" format=3 uid="uid://yecgcss5i2y2"]
 
 [ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="1_oqufh"]
+[ext_resource type="Script" uid="uid://b12km7tsvhier" path="res://state/inventory_slot.gd" id="2_orxos"]
 [ext_resource type="Script" uid="uid://b5megc44v63ji" path="res://state/inventory.gd" id="2_xng3u"]
+[ext_resource type="Resource" uid="uid://qrs7sxjv6kxj" path="res://outfits/scenes/shirt/shirt1.tres" id="4_orxos"]
+
+[sub_resource type="Resource" id="Resource_fs6qv"]
+script = ExtResource("2_orxos")
+accessories = Array[ExtResource("1_oqufh")]([null])
+metadata/_custom_type_script = "uid://b12km7tsvhier"
+
+[sub_resource type="Resource" id="Resource_0t3b5"]
+script = ExtResource("2_orxos")
+type = 3
+accessories = Array[ExtResource("1_oqufh")]([null])
+metadata/_custom_type_script = "uid://b12km7tsvhier"
+
+[sub_resource type="Resource" id="Resource_m58vb"]
+script = ExtResource("2_orxos")
+type = 2
+accessories = Array[ExtResource("1_oqufh")]([ExtResource("4_orxos")])
+metadata/_custom_type_script = "uid://b12km7tsvhier"
 
 [resource]
 script = ExtResource("2_xng3u")
+hats = SubResource("Resource_fs6qv")
+shirts = SubResource("Resource_m58vb")
+helds = SubResource("Resource_0t3b5")
 metadata/_custom_type_script = "uid://b5megc44v63ji"

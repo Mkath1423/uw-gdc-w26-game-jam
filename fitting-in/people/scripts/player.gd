@@ -26,6 +26,16 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func set_outfit():
+	person.set_accessory(
+		GameState.player_inventory.hats.get_current())
+	
+	person.set_accessory(
+		GameState.player_inventory.shirts.get_current())
+	
+	person.set_accessory(
+		GameState.player_inventory.helds.get_current())
+
 func on_stress_changed():
 	print_debug("STRESSED %d" % GameState.stress) 
 
