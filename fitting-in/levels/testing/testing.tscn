@@ -12,6 +12,7 @@ radius = 172.28465
 y_sort_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=843127577]
+zoom = Vector2(0.33, 0.33)
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1654547717]
 

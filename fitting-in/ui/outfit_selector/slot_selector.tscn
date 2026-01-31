@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d3t171i1ujoch"]
+
+[ext_resource type="Texture2D" uid="uid://kmrrub2yc87s" path="res://icon.svg" id="1_agl2j"]
+
+[node name="slot_selector" type="HBoxContainer" unique_id=2133742375]
+
+[node name="left" type="TextureButton" parent="." unique_id=786201201]
+layout_mode = 2
+texture_normal = ExtResource("1_agl2j")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=750514907]
+layout_mode = 2
+texture = ExtResource("1_agl2j")
+
+[node name="right" type="TextureButton" parent="." unique_id=1689162581]
+layout_mode = 2
+texture_normal = ExtResource("1_agl2j")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://34poimboyebg"]
+
+[ext_resource type="PackedScene" uid="uid://d3t171i1ujoch" path="res://ui/outfit_selector/slot_selector.tscn" id="1_fibnn"]
+
+[node name="OutfitSelector" type="Control" unique_id=1966878986]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="." unique_id=1153710392]
+layout_mode = 0
+offset_right = 291.0
+offset_bottom = 239.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=750100402]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" parent="Panel/VBoxContainer" unique_id=2133742375 instance=ExtResource("1_fibnn")]
+layout_mode = 2
