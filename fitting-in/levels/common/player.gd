@@ -19,10 +19,8 @@ func _physics_process(delta: float) -> void:
 	var move_by = accel
 	if input_dir.length_squared() < 0.01 * 0.01:
 		move_by = stopping
-		
-	velocity = velocity.move_toward(input_dir * base_speed, move_by * delta)
 
-	print_debug(input_dir, velocity)
+	velocity = velocity.move_toward(input_dir * base_speed, move_by * delta)
 
 	move_and_slide()
 

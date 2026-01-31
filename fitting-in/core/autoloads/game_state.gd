@@ -6,4 +6,5 @@ var player_inventory : PlayerInventory = load("res://state/player_inventory.tres
 signal state_reset
 
 func reset():
+	player_stress.stress = 0
 	state_reset.emit()

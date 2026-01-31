@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dy8puwyn0k0x" path="res://levels/common/player_detect.gd" id="1_px6xo"]
 
 [node name="PlayerDetect" type="Area2D" unique_id=1675569352]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_px6xo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
