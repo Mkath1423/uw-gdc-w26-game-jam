@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://djp57a3ieuvmi"]
-
-[ext_resource type="PackedScene" uid="uid://cbqpc2vlvplb3" path="res://outfits/scenes/hair/hair_accessory.tscn" id="1_yjk4e"]
-[ext_resource type="Texture2D" uid="uid://de3fqy4in0v8l" path="res://sprites/hair_short_3.png" id="2_awrq8"]
-
-[node name="head_accessory" unique_id=550483700 instance=ExtResource("1_yjk4e")]
-
-[node name="front" parent="offset" parent_id_path=PackedInt32Array(1241458596) index="1" unique_id=435832870]
-texture = ExtResource("2_awrq8")

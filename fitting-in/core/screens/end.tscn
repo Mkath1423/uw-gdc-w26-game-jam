@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dkm0b4srjxkr6"]
+
+[ext_resource type="Script" uid="uid://dtmrqqrmm7v1g" path="res://core/screens/end.gd" id="1_nhlfl"]
+
+[node name="End" type="Node2D" unique_id=2128442876]
+script = ExtResource("1_nhlfl")

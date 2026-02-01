@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://bwjrk86fduxb4"]
+
+[ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="1_2h483"]
+[ext_resource type="Texture2D" uid="uid://bpvu8n2angs11" path="res://sprites/accessories/crossout.png" id="1_yu7wu"]
+
+[resource]
+script = ExtResource("1_2h483")
+icon = ExtResource("1_yu7wu")
+metadata/_custom_type_script = "uid://wuf76ufyhu5v"

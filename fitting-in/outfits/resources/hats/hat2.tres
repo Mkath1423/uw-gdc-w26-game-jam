@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://buf8hmuhnb0tt"]
+
+[ext_resource type="Texture2D" uid="uid://bhsplic53qv3j" path="res://sprites/accessories/acc_headphones_2.png" id="1_8tm4m"]
+[ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="2_uir8l"]
+
+[resource]
+script = ExtResource("2_uir8l")
+icon = ExtResource("1_8tm4m")
+hat = ExtResource("1_8tm4m")
+metadata/_custom_type_script = "uid://wuf76ufyhu5v"

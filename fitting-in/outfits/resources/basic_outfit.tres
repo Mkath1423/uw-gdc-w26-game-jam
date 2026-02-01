@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://br6c5to0umxtl"]
+
+[ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="1_d42hv"]
+[ext_resource type="Texture2D" uid="uid://bylc6knw7bbai" path="res://sprites/accessories/body_base.png" id="2_2bved"]
+
+[resource]
+script = ExtResource("1_d42hv")
+shirt = ExtResource("2_2bved")
+type = 4
+metadata/_custom_type_script = "uid://wuf76ufyhu5v"

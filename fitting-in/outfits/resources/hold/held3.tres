@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://swgt6cj8sfyf"]
+
+[ext_resource type="Texture2D" uid="uid://sxsy7bnhs3tw" path="res://sprites/accessories/acc_handbag_3.png" id="1_ckicp"]
+[ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="2_qnf8w"]
+
+[resource]
+script = ExtResource("2_qnf8w")
+icon = ExtResource("1_ckicp")
+held = ExtResource("1_ckicp")
+type = 3
+metadata/_custom_type_script = "uid://wuf76ufyhu5v"

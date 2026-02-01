@@ -2,16 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dnla2gsrd5vk" path="res://people/scripts/group.gd" id="1_uqn4f"]
 [ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="2_6jp05"]
-[ext_resource type="Resource" uid="uid://lspafseqw1rk" path="res://outfits/scenes/hat/hat1.tres" id="2_gfun8"]
-[ext_resource type="Resource" uid="uid://qrs7sxjv6kxj" path="res://outfits/scenes/shirt/shirt1.tres" id="3_kgmji"]
-[ext_resource type="Resource" uid="uid://d1fenbbm6mx1m" path="res://outfits/scenes/held/held1.tres" id="4_hcuji"]
-[ext_resource type="PackedScene" uid="uid://bs02j5ybgumyu" path="res://people/person.tscn" id="6_gfun8"]
+[ext_resource type="Resource" uid="uid://c1rdgwqkxpgdn" path="res://outfits/resources/hats/hat3.tres" id="2_nlvp2"]
+[ext_resource type="PackedScene" uid="uid://b5fcf0fsr5inx" path="res://people/person.tscn" id="6_gfun8"]
 
 [node name="Group" type="Node2D" unique_id=1066614569 node_paths=PackedStringArray("people")]
 script = ExtResource("1_uqn4f")
-hat = ExtResource("2_gfun8")
-shirt = ExtResource("3_kgmji")
-held = ExtResource("4_hcuji")
+hat = ExtResource("2_nlvp2")
 people = NodePath("people")
 
 [node name="PlayerDetect" parent="." unique_id=1675569352 instance=ExtResource("2_6jp05")]
