@@ -16,6 +16,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3yx6"]
 size = Vector2(500, 957)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iudd3"]
+size = Vector2(500, 957)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eibq"]
+size = Vector2(500, 957)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yixou"]
 size = Vector2(4326, 118)
 
@@ -117,7 +123,7 @@ people = NodePath("people")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Group2/PlayerDetect" unique_id=1368519962]
 position = Vector2(-11, 32)
-shape = SubResource("RectangleShape2D_d3yx6")
+shape = SubResource("RectangleShape2D_iudd3")
 
 [node name="people" type="Node2D" parent="Group2" unique_id=386547096]
 y_sort_enabled = true
@@ -167,7 +173,7 @@ people = NodePath("people")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Group3/PlayerDetect" unique_id=1877467446]
 position = Vector2(-11, 32)
-shape = SubResource("RectangleShape2D_d3yx6")
+shape = SubResource("RectangleShape2D_2eibq")
 
 [node name="people" type="Node2D" parent="Group3" unique_id=1046444648]
 y_sort_enabled = true

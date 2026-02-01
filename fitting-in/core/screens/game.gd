@@ -40,20 +40,19 @@ func load_current_level_impl():
 	var new_level = levels[current_level].instantiate()
 	level_parent.add_child(new_level)
 	new_level.level_over.connect(next_level)
-	restore_inventory()
+	# restore_inventory()
 
 func load_current_level():
 	call_deferred("load_current_level_impl")
 
 
 func next_level():
-	print("DEBUG: ATTEMPTING TO CALL NEXT LEVEL")
 	current_level += 1
 	if current_level == levels.size():
 		SceneManager.swap_screen(SceneManager.Screen.End)
 
 	else:
-		save_inventory()
+		 # save_inventory()
 		load_current_level()
 
 func _on_player_detect_stress_limit_reached():
