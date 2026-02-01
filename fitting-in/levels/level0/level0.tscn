@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="2_6ncff"]
 [ext_resource type="PackedScene" uid="uid://bujenxapoax2n" path="res://levels/testing/test_group.tscn" id="3_dqb54"]
 [ext_resource type="PackedScene" uid="uid://34poimboyebg" path="res://ui/outfit_selector/outfit_selector.tscn" id="4_bgjy1"]
+[ext_resource type="PackedScene" uid="uid://cte0j72n55b6n" path="res://levels/common/win_zone.tscn" id="5_xs64s"]
 
 [node name="level0" type="Node2D" unique_id=419732774]
 y_sort_enabled = true
@@ -36,3 +37,8 @@ y_sort_enabled = true
 position = Vector2(2803, 858)
 
 [node name="OutfitSelector" parent="." unique_id=1551711159 instance=ExtResource("4_bgjy1")]
+
+[node name="WinZone" parent="." unique_id=374289698 instance=ExtResource("5_xs64s")]
+position = Vector2(-830, 931)
+
+[connection signal="entered_win_zone" from="WinZone" to="." method="_on_win_zone_entered_win_zone"]
