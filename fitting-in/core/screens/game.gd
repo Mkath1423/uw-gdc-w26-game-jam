@@ -12,6 +12,7 @@ var current_level = 0
 func _ready():
 	GameState.reset()
 	load_current_level()
+	GameState.player_stress.stress_limit_reached.connect(_on_player_detect_stress_limit_reached)
 
 
 func load_current_level():
@@ -28,3 +29,7 @@ func next_level():
 
 	else:
 		load_current_level()
+
+func _on_player_detect_stress_limit_reached():
+	load_current_level()
+	GameState.reset()

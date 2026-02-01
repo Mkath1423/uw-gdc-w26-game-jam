@@ -2,10 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dnla2gsrd5vk" path="res://people/scripts/group.gd" id="1_uqn4f"]
 [ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="2_6jp05"]
+[ext_resource type="Resource" uid="uid://lspafseqw1rk" path="res://outfits/scenes/hat/hat1.tres" id="2_gfun8"]
+[ext_resource type="Resource" uid="uid://qrs7sxjv6kxj" path="res://outfits/scenes/shirt/shirt1.tres" id="3_kgmji"]
 [ext_resource type="Script" uid="uid://b2gqy3upn2kg4" path="res://people/scripts/person.gd" id="3_nlvp2"]
+[ext_resource type="Resource" uid="uid://d1fenbbm6mx1m" path="res://outfits/scenes/held/held1.tres" id="4_hcuji"]
 
 [node name="Group" type="Node2D" unique_id=1066614569]
 script = ExtResource("1_uqn4f")
+hat = ExtResource("2_gfun8")
+shirt = ExtResource("3_kgmji")
+held = ExtResource("4_hcuji")
 
 [node name="PlayerDetect" parent="." unique_id=1675569352 instance=ExtResource("2_6jp05")]
 

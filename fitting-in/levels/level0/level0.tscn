@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://nb40i15f0sok" path="res://sprites/tiles/walls.tres" id="1_be24l"]
 [ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="2_6ncff"]
+[ext_resource type="PackedScene" uid="uid://bujenxapoax2n" path="res://levels/testing/test_group.tscn" id="3_dqb54"]
 
 [node name="level0" type="Node" unique_id=869372501]
 
@@ -16,3 +17,6 @@ position = Vector2(4121, 789)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2089778737]
 position = Vector2(1890, 626)
 zoom = Vector2(0.16, 0.16)
+
+[node name="Group" parent="." unique_id=1066614569 instance=ExtResource("3_dqb54")]
+position = Vector2(3470, 813)
