@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="2_6jp05"]
 [ext_resource type="Resource" uid="uid://lspafseqw1rk" path="res://outfits/scenes/hat/hat1.tres" id="2_gfun8"]
 [ext_resource type="Resource" uid="uid://qrs7sxjv6kxj" path="res://outfits/scenes/shirt/shirt1.tres" id="3_kgmji"]
-[ext_resource type="Script" uid="uid://b2gqy3upn2kg4" path="res://people/scripts/person.gd" id="3_nlvp2"]
 [ext_resource type="Resource" uid="uid://d1fenbbm6mx1m" path="res://outfits/scenes/held/held1.tres" id="4_hcuji"]
+[ext_resource type="PackedScene" uid="uid://bs02j5ybgumyu" path="res://people/person.tscn" id="6_gfun8"]
 
 [node name="Group" type="Node2D" unique_id=1066614569]
 script = ExtResource("1_uqn4f")
@@ -18,25 +18,19 @@ held = ExtResource("4_hcuji")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDetect" unique_id=658550186]
 polygon = PackedVector2Array(89, 179, -85, 177, -369, -39, -160, -147, -16, -259, 402, -15)
 
-[node name="Person" type="Node2D" parent="." unique_id=1369749372]
-position = Vector2(-276, -39)
-script = ExtResource("3_nlvp2")
-metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+[node name="Person5" parent="." unique_id=67439441 instance=ExtResource("6_gfun8")]
 
-[node name="Person2" type="Node2D" parent="." unique_id=2436771]
-position = Vector2(197, -12)
-script = ExtResource("3_nlvp2")
-metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+[node name="Person6" parent="." unique_id=1123213082 instance=ExtResource("6_gfun8")]
+position = Vector2(-201, -64)
 
-[node name="Person3" type="Node2D" parent="." unique_id=2059521810]
-position = Vector2(-9, -172)
-script = ExtResource("3_nlvp2")
-metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+[node name="Person7" parent="." unique_id=196737635 instance=ExtResource("6_gfun8")]
+position = Vector2(86, 120)
 
-[node name="Person4" type="Node2D" parent="." unique_id=404350608]
-position = Vector2(-33, 110)
-script = ExtResource("3_nlvp2")
-metadata/_custom_type_script = "uid://b2gqy3upn2kg4"
+[node name="Person8" parent="." unique_id=1566712462 instance=ExtResource("6_gfun8")]
+position = Vector2(-99, 128)
+
+[node name="Person9" parent="." unique_id=1404308396 instance=ExtResource("6_gfun8")]
+position = Vector2(243, -12)
 
 [connection signal="player_enter" from="PlayerDetect" to="." method="_on_player_detect_player_enter"]
 [connection signal="player_exit" from="PlayerDetect" to="." method="_on_player_detect_player_exit"]
