@@ -1,13 +1,14 @@
 extends Node2D
 
 enum Screen {
-	Start, Game, End
+	Start, Controls, Game, End
 }
 
 var current_screen : Screen = Screen.Start
 
 var screen_map : Dictionary[Screen, PackedScene] = {
 	Screen.Start : load("res://core/screens/start.tscn"),
+	Screen.Controls : load("res://core/screens/controls.tscn"),
 	Screen.Game : load("res://core/screens/game.tscn"),
 	Screen.End : load("res://core/screens/end.tscn"),
 }

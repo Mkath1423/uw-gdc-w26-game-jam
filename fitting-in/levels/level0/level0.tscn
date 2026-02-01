@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://blv0px8f4twsv"]
 
 [ext_resource type="TileSet" uid="uid://nb40i15f0sok" path="res://sprites/tiles/walls.tres" id="1_be24l"]
-[ext_resource type="Script" path="res://levels/common/levelx.gd" id="1_bgjy1"]
+[ext_resource type="Script" uid="uid://qv4sgwuj463c" path="res://levels/common/levelx.gd" id="1_bgjy1"]
 [ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="2_6ncff"]
 [ext_resource type="PackedScene" uid="uid://bujenxapoax2n" path="res://levels/testing/test_group.tscn" id="3_dqb54"]
 [ext_resource type="PackedScene" uid="uid://34poimboyebg" path="res://ui/outfit_selector/outfit_selector.tscn" id="4_bgjy1"]
