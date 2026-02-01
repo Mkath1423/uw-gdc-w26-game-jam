@@ -6,6 +6,8 @@ extends Node2D
 @export var shirt : BaseAccessory
 @export var held : BaseAccessory
 
+@export var people : Node 
+
 var randomHat = load("res://outfits/scenes/hat/random_hat.tres")
 var randomShirt = load("res://outfits/scenes/shirt/random_shirt.tres")
 var randomHeld = load("res://outfits/scenes/held/random_held.tres")
@@ -16,6 +18,12 @@ var isPlayerMatching = false
 # Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis 
 func _ready():
 	GameState.player_inventory.outfit_changed.connect(_on_player_detect_player_inventory_change)
+
+	for c in people.get_children():
+		if c is Person:
+			c.set_accessory(hat if hat != null else randomHat)
+			c.set_accessory(shirt if shirt != null else randomShirt)
+			c.set_accessory(held if held != null else randomHeld)
 
 # All player accessories must match group accessories,
 # except for random group accessories

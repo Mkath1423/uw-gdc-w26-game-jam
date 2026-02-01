@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://butx7mth5uv72"]
 
 [node name="head_accessory" type="Node2D" unique_id=550483700]
+y_sort_enabled = true
 
 [node name="offset" type="Node2D" parent="." unique_id=1241458596]
+y_sort_enabled = true
 position = Vector2(6, 80)
