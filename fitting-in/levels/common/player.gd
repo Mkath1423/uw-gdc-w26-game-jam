@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 
 	elif person.animation_player.current_animation != "walk":
 		person.set_animation_walking()
+		print("walking")
 
 	velocity = velocity.move_toward(input_dir * base_speed, move_by * delta)
 

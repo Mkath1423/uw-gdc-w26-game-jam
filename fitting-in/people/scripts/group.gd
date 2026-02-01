@@ -21,6 +21,7 @@ func _ready():
 			c.set_accessory(hat)
 			c.set_accessory(shirt)
 			c.set_accessory(held)
+			c.set_animation_idle()
 
 # All player accessories must match group accessories,
 # except for random group accessories

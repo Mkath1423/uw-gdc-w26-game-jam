@@ -23,10 +23,12 @@ func set_accessory(acc: Accessory):
 
 func set_animation_walking():
 	animation_player.play("walk")
-	animation_player.speed_scale = 4
+	animation_player.speed_scale = 14
 
 func set_animation_idle():
 	animation_player.play("idle")
+	animation_player.speed_scale = 5
+	animation_player.seek(randf() * 3)
 
 func clear_animation():
 	animation_player.stop()
