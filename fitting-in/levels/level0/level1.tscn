@@ -13,14 +13,14 @@
 [ext_resource type="Resource" uid="uid://swgt6cj8sfyf" path="res://outfits/resources/hold/held3.tres" id="9_iudd3"]
 [ext_resource type="Texture2D" uid="uid://dybf7q6a2g6n1" path="res://sprites/tiles/flag.png" id="12_2eibq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3yx6"]
-size = Vector2(500, 957)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eibq"]
+size = Vector2(1341, 957)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iudd3"]
 size = Vector2(500, 957)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eibq"]
-size = Vector2(500, 957)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0i3oh"]
+size = Vector2(1476, 957)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yixou"]
 size = Vector2(4326, 118)
@@ -69,8 +69,8 @@ people = NodePath("people")
 [node name="PlayerDetect" parent="Group" unique_id=1675569352 instance=ExtResource("6_0i3oh")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Group/PlayerDetect" unique_id=171260744]
-position = Vector2(-11, 32)
-shape = SubResource("RectangleShape2D_d3yx6")
+position = Vector2(409.5, 32)
+shape = SubResource("RectangleShape2D_2eibq")
 
 [node name="people" type="Node2D" parent="Group" unique_id=846260116]
 y_sort_enabled = true
@@ -78,6 +78,93 @@ position = Vector2(-1, 7)
 
 [node name="Person5" parent="Group/people" unique_id=67439441 instance=ExtResource("7_at1kt")]
 position = Vector2(-17, -19)
+
+[node name="Person17" parent="Group/people" unique_id=1538807471 instance=ExtResource("7_at1kt")]
+position = Vector2(283, -28)
+
+[node name="Person18" parent="Group/people" unique_id=71820089 instance=ExtResource("7_at1kt")]
+position = Vector2(388, -138)
+
+[node name="Person19" parent="Group/people" unique_id=1232254288 instance=ExtResource("7_at1kt")]
+position = Vector2(328, -255)
+
+[node name="Person20" parent="Group/people" unique_id=1249716532 instance=ExtResource("7_at1kt")]
+position = Vector2(575, -201)
+
+[node name="Person21" parent="Group/people" unique_id=726312783 instance=ExtResource("7_at1kt")]
+position = Vector2(658, -261)
+
+[node name="Person22" parent="Group/people" unique_id=754764274 instance=ExtResource("7_at1kt")]
+position = Vector2(979, -352)
+
+[node name="Person23" parent="Group/people" unique_id=1039720643 instance=ExtResource("7_at1kt")]
+position = Vector2(851, -278)
+
+[node name="Person24" parent="Group/people" unique_id=808651015 instance=ExtResource("7_at1kt")]
+position = Vector2(991, -228)
+
+[node name="Person25" parent="Group/people" unique_id=609005560 instance=ExtResource("7_at1kt")]
+position = Vector2(875, -131)
+
+[node name="Person26" parent="Group/people" unique_id=1746576944 instance=ExtResource("7_at1kt")]
+position = Vector2(759, -147)
+
+[node name="Person27" parent="Group/people" unique_id=778653181 instance=ExtResource("7_at1kt")]
+position = Vector2(928, 0)
+
+[node name="Person28" parent="Group/people" unique_id=1960779460 instance=ExtResource("7_at1kt")]
+position = Vector2(736, 10)
+
+[node name="Person29" parent="Group/people" unique_id=1702299632 instance=ExtResource("7_at1kt")]
+position = Vector2(596, -52)
+
+[node name="Person30" parent="Group/people" unique_id=950644950 instance=ExtResource("7_at1kt")]
+position = Vector2(492, -275)
+
+[node name="Person31" parent="Group/people" unique_id=1307825210 instance=ExtResource("7_at1kt")]
+position = Vector2(440, -30)
+
+[node name="Person32" parent="Group/people" unique_id=517146100 instance=ExtResource("7_at1kt")]
+position = Vector2(340, 99)
+
+[node name="Person33" parent="Group/people" unique_id=824360115 instance=ExtResource("7_at1kt")]
+position = Vector2(183, 156)
+
+[node name="Person34" parent="Group/people" unique_id=1657286551 instance=ExtResource("7_at1kt")]
+position = Vector2(293, 251)
+
+[node name="Person35" parent="Group/people" unique_id=941195964 instance=ExtResource("7_at1kt")]
+position = Vector2(529, 153)
+
+[node name="Person36" parent="Group/people" unique_id=629165861 instance=ExtResource("7_at1kt")]
+position = Vector2(731, 144)
+
+[node name="Person37" parent="Group/people" unique_id=1348152289 instance=ExtResource("7_at1kt")]
+position = Vector2(857, 144)
+
+[node name="Person38" parent="Group/people" unique_id=268505200 instance=ExtResource("7_at1kt")]
+position = Vector2(947, 339)
+
+[node name="Person39" parent="Group/people" unique_id=1009729468 instance=ExtResource("7_at1kt")]
+position = Vector2(622, 249)
+
+[node name="Person40" parent="Group/people" unique_id=638050872 instance=ExtResource("7_at1kt")]
+position = Vector2(791, 263)
+
+[node name="Person41" parent="Group/people" unique_id=1548903575 instance=ExtResource("7_at1kt")]
+position = Vector2(845, 480)
+
+[node name="Person42" parent="Group/people" unique_id=616627016 instance=ExtResource("7_at1kt")]
+position = Vector2(683, 430)
+
+[node name="Person43" parent="Group/people" unique_id=1089286704 instance=ExtResource("7_at1kt")]
+position = Vector2(462, 430)
+
+[node name="Person44" parent="Group/people" unique_id=1662261721 instance=ExtResource("7_at1kt")]
+position = Vector2(421, 302)
+
+[node name="Person45" parent="Group/people" unique_id=1559934593 instance=ExtResource("7_at1kt")]
+position = Vector2(276, 433)
 
 [node name="Person6" parent="Group/people" unique_id=1584014847 instance=ExtResource("7_at1kt")]
 position = Vector2(-105, 115)
@@ -172,8 +259,8 @@ people = NodePath("people")
 [node name="PlayerDetect" parent="Group3" unique_id=627003833 instance=ExtResource("6_0i3oh")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Group3/PlayerDetect" unique_id=1877467446]
-position = Vector2(-11, 32)
-shape = SubResource("RectangleShape2D_2eibq")
+position = Vector2(-499, 32)
+shape = SubResource("RectangleShape2D_0i3oh")
 
 [node name="people" type="Node2D" parent="Group3" unique_id=1046444648]
 y_sort_enabled = true
@@ -190,6 +277,87 @@ position = Vector2(59, 216)
 
 [node name="Person8" parent="Group3/people" unique_id=1324816816 instance=ExtResource("7_at1kt")]
 position = Vector2(115, 72)
+
+[node name="Person19" parent="Group3/people" unique_id=1667556039 instance=ExtResource("7_at1kt")]
+position = Vector2(-301, 74)
+
+[node name="Person20" parent="Group3/people" unique_id=1794908449 instance=ExtResource("7_at1kt")]
+position = Vector2(-468, -4)
+
+[node name="Person21" parent="Group3/people" unique_id=1578367988 instance=ExtResource("7_at1kt")]
+position = Vector2(-1155, -263)
+
+[node name="Person22" parent="Group3/people" unique_id=820457532 instance=ExtResource("7_at1kt")]
+position = Vector2(-1152, -82)
+
+[node name="Person23" parent="Group3/people" unique_id=285410529 instance=ExtResource("7_at1kt")]
+position = Vector2(-1050, -149)
+
+[node name="Person24" parent="Group3/people" unique_id=1201155559 instance=ExtResource("7_at1kt")]
+position = Vector2(-1007, -58)
+
+[node name="Person25" parent="Group3/people" unique_id=2024422036 instance=ExtResource("7_at1kt")]
+position = Vector2(-1083, 13)
+
+[node name="Person26" parent="Group3/people" unique_id=1343215068 instance=ExtResource("7_at1kt")]
+position = Vector2(-1135, 165)
+
+[node name="Person27" parent="Group3/people" unique_id=501217833 instance=ExtResource("7_at1kt")]
+position = Vector2(-1135, 351)
+
+[node name="Person28" parent="Group3/people" unique_id=700822564 instance=ExtResource("7_at1kt")]
+position = Vector2(-1026, 256)
+
+[node name="Person29" parent="Group3/people" unique_id=1418771923 instance=ExtResource("7_at1kt")]
+position = Vector2(-909, 85)
+
+[node name="Person30" parent="Group3/people" unique_id=1775450071 instance=ExtResource("7_at1kt")]
+position = Vector2(-831, 366)
+
+[node name="Person31" parent="Group3/people" unique_id=1434985603 instance=ExtResource("7_at1kt")]
+position = Vector2(-979, 456)
+
+[node name="Person32" parent="Group3/people" unique_id=646465315 instance=ExtResource("7_at1kt")]
+position = Vector2(-518, 359)
+
+[node name="Person33" parent="Group3/people" unique_id=1934134293 instance=ExtResource("7_at1kt")]
+position = Vector2(-625, 395)
+
+[node name="Person34" parent="Group3/people" unique_id=1778463891 instance=ExtResource("7_at1kt")]
+position = Vector2(-761, 266)
+
+[node name="Person35" parent="Group3/people" unique_id=2138087047 instance=ExtResource("7_at1kt")]
+position = Vector2(-789, 118)
+
+[node name="Person36" parent="Group3/people" unique_id=1078968596 instance=ExtResource("7_at1kt")]
+position = Vector2(-611, 154)
+
+[node name="Person37" parent="Group3/people" unique_id=951894699 instance=ExtResource("7_at1kt")]
+position = Vector2(-718, -50)
+
+[node name="Person38" parent="Group3/people" unique_id=479325129 instance=ExtResource("7_at1kt")]
+position = Vector2(-849, -136)
+
+[node name="Person39" parent="Group3/people" unique_id=1073970627 instance=ExtResource("7_at1kt")]
+position = Vector2(-890, -253)
+
+[node name="Person40" parent="Group3/people" unique_id=1926432346 instance=ExtResource("7_at1kt")]
+position = Vector2(-721, -281)
+
+[node name="Person41" parent="Group3/people" unique_id=2079979489 instance=ExtResource("7_at1kt")]
+position = Vector2(-585, -172)
+
+[node name="Person42" parent="Group3/people" unique_id=1267360672 instance=ExtResource("7_at1kt")]
+position = Vector2(-475, -305)
+
+[node name="Person43" parent="Group3/people" unique_id=2024428111 instance=ExtResource("7_at1kt")]
+position = Vector2(-371, -227)
+
+[node name="Person44" parent="Group3/people" unique_id=865143227 instance=ExtResource("7_at1kt")]
+position = Vector2(-355, 215)
+
+[node name="Person45" parent="Group3/people" unique_id=1733509371 instance=ExtResource("7_at1kt")]
+position = Vector2(-348, 391)
 
 [node name="Person9" parent="Group3/people" unique_id=95584644 instance=ExtResource("7_at1kt")]
 position = Vector2(130, -188)

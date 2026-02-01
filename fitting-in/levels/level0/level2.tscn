@@ -5,10 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="3_l4v4b"]
 [ext_resource type="Script" uid="uid://dnla2gsrd5vk" path="res://people/scripts/group.gd" id="4_cm1wb"]
 [ext_resource type="Resource" uid="uid://buf8hmuhnb0tt" path="res://outfits/resources/hats/hat2.tres" id="5_cm1wb"]
-[ext_resource type="Resource" uid="uid://duwqhywd565jr" path="res://outfits/resources/shirts/shirt3.tres" id="6_8lts6"]
 [ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="6_ljv16"]
 [ext_resource type="PackedScene" uid="uid://b5fcf0fsr5inx" path="res://people/person.tscn" id="7_53ryr"]
-[ext_resource type="Resource" uid="uid://mttssairuj8r" path="res://outfits/resources/hold/held1.tres" id="7_nqncg"]
 [ext_resource type="PackedScene" uid="uid://cte0j72n55b6n" path="res://levels/common/win_zone.tscn" id="8_8lts6"]
 [ext_resource type="Resource" uid="uid://baqgdrqe78py8" path="res://outfits/resources/shirts/shirt1.tres" id="8_glks3"]
 [ext_resource type="Resource" uid="uid://swgt6cj8sfyf" path="res://outfits/resources/hold/held3.tres" id="9_ljv16"]
@@ -69,8 +67,8 @@ y_sort_enabled = true
 position = Vector2(2037, 925)
 script = ExtResource("4_cm1wb")
 hat = ExtResource("5_cm1wb")
-shirt = ExtResource("6_8lts6")
-held = ExtResource("7_nqncg")
+shirt = ExtResource("13_nqncg")
+held = ExtResource("12_xlx1a")
 people = NodePath("people")
 
 [node name="PlayerDetect" parent="Group" unique_id=1675569352 instance=ExtResource("6_ljv16")]

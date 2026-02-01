@@ -3,8 +3,7 @@ extends Node2D
 var levels : Array[PackedScene] = [
 	load("res://levels/level0/level0.tscn"),
 	load("res://levels/level0/level1.tscn"),
-	load("res://levels/level0/level2.tscn"),
-	load("res://levels/level0/level3.tscn")
+	load("res://levels/level0/level2.tscn")
 ]
 
 
