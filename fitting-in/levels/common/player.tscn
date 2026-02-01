@@ -6,12 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
 size = Vector2(127, 55)
 
-[node name="Player" type="CharacterBody2D" unique_id=1015663847 groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1015663847 node_paths=PackedStringArray("person") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_vlk2o")
 base_speed = 1000.0
 accel = 5000.0
 stopping = 9000.0
+person = NodePath("Person")
 
 [node name="Person" parent="." unique_id=67439441 instance=ExtResource("2_ilric")]
 y_sort_enabled = true
