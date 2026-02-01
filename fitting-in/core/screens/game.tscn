@@ -11,3 +11,6 @@ level_parent = NodePath("Level")
 
 [node name="stress_manager" type="Node" parent="." unique_id=1361253676]
 script = ExtResource("3_w6s28")
+stress_inc_rate = 60
+safe_color = Color(0.9411765, 0.9411765, 0.78431374, 1)
+death_color = Color(0.65950084, 0.055247225, 0.01596473, 1)

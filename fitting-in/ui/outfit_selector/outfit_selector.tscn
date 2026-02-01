@@ -13,6 +13,7 @@ script = ExtResource("1_t1m1y")
 panel = NodePath("PanelContainer")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1959029986]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
