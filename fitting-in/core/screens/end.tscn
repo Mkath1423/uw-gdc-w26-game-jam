@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://dkm0b4srjxkr6"]
+[gd_scene format=3 uid="uid://bqptrjuqw43py"]
 
-[ext_resource type="Script" uid="uid://dtmrqqrmm7v1g" path="res://core/screens/end.gd" id="1_nhlfl"]
+[ext_resource type="Texture2D" uid="uid://clgy3l86dc7x8" path="res://sprites/endcard.png" id="2_e4qg6"]
 
 [node name="End" type="Node2D" unique_id=2128442876]
-script = ExtResource("1_nhlfl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2004691997]
+texture = ExtResource("2_e4qg6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=794573652]
+zoom = Vector2(0.6, 0.6)
