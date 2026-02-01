@@ -7,30 +7,36 @@
 [ext_resource type="Resource" uid="uid://d1fenbbm6mx1m" path="res://outfits/scenes/held/held1.tres" id="4_hcuji"]
 [ext_resource type="PackedScene" uid="uid://bs02j5ybgumyu" path="res://people/person.tscn" id="6_gfun8"]
 
-[node name="Group" type="Node2D" unique_id=1066614569]
+[node name="Group" type="Node2D" unique_id=1066614569 node_paths=PackedStringArray("people")]
 script = ExtResource("1_uqn4f")
 hat = ExtResource("2_gfun8")
 shirt = ExtResource("3_kgmji")
 held = ExtResource("4_hcuji")
+people = NodePath("people")
 
 [node name="PlayerDetect" parent="." unique_id=1675569352 instance=ExtResource("2_6jp05")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDetect" unique_id=658550186]
 polygon = PackedVector2Array(89, 179, -85, 177, -369, -39, -160, -147, -16, -259, 402, -15)
 
-[node name="Person5" parent="." unique_id=67439441 instance=ExtResource("6_gfun8")]
+[node name="people" type="Node2D" parent="." unique_id=846260116]
+y_sort_enabled = true
+position = Vector2(-1, 7)
 
-[node name="Person6" parent="." unique_id=1123213082 instance=ExtResource("6_gfun8")]
+[node name="Person5" parent="people" unique_id=67439441 instance=ExtResource("6_gfun8")]
+position = Vector2(-17, -19)
+
+[node name="Person6" parent="people" unique_id=1123213082 instance=ExtResource("6_gfun8")]
 position = Vector2(-201, -64)
 
-[node name="Person7" parent="." unique_id=196737635 instance=ExtResource("6_gfun8")]
-position = Vector2(86, 120)
+[node name="Person7" parent="people" unique_id=196737635 instance=ExtResource("6_gfun8")]
+position = Vector2(60, 103)
 
-[node name="Person8" parent="." unique_id=1566712462 instance=ExtResource("6_gfun8")]
-position = Vector2(-99, 128)
+[node name="Person8" parent="people" unique_id=1566712462 instance=ExtResource("6_gfun8")]
+position = Vector2(-141, 107)
 
-[node name="Person9" parent="." unique_id=1404308396 instance=ExtResource("6_gfun8")]
-position = Vector2(243, -12)
+[node name="Person9" parent="people" unique_id=1404308396 instance=ExtResource("6_gfun8")]
+position = Vector2(203, 37)
 
 [connection signal="player_enter" from="PlayerDetect" to="." method="_on_player_detect_player_enter"]
 [connection signal="player_exit" from="PlayerDetect" to="." method="_on_player_detect_player_exit"]

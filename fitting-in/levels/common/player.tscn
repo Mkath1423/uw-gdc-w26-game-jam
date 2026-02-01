@@ -7,6 +7,7 @@
 size = Vector2(127, 55)
 
 [node name="Player" type="CharacterBody2D" unique_id=1015663847 node_paths=PackedStringArray("person") groups=["player"]]
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_vlk2o")
 base_speed = 1000.0
