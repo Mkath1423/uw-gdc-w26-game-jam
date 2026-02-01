@@ -4,11 +4,9 @@ enum AccessoryType {
 	Hat,
 	Hair,
 	Shirt,
-	Held
+	Held,
+	Outfit
 }
-
-func get_prefab():
-	pass
 
 func get_type():
 	pass

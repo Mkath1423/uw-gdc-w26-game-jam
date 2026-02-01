@@ -4,39 +4,43 @@
 [ext_resource type="PackedScene" uid="uid://d3t171i1ujoch" path="res://ui/outfit_selector/slot_selector.tscn" id="1_fibnn"]
 [ext_resource type="Script" uid="uid://dbfb0box2bp1k" path="res://ui/outfit_selector/outfit_selector.gd" id="1_t1m1y"]
 
-[node name="OutfitSelector" type="TextureRect" unique_id=1551711159]
-anchors_preset = -1
-anchor_right = 3.3140001
-anchor_bottom = 5.927
-offset_right = -1362.728
-offset_bottom = -1409.696
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_43y58")
-stretch_mode = 4
+[node name="Control" type="Control" unique_id=1175731890 node_paths=PackedStringArray("panel")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1888.0
+offset_bottom = 1888.0
 script = ExtResource("1_t1m1y")
+panel = NodePath("PanelContainer")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=657318350]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1959029986]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OutfitSelector" type="TextureRect" parent="PanelContainer" unique_id=1551711159]
+layout_mode = 2
+texture = ExtResource("1_43y58")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=657318350]
+layout_mode = 2
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 100
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=244565357]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=244565357]
 layout_mode = 2
 alignment = 1
 
-[node name="slot_selector" parent="MarginContainer/VBoxContainer" unique_id=2133742375 instance=ExtResource("1_fibnn")]
+[node name="slot_selector" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2133742375 instance=ExtResource("1_fibnn")]
 layout_mode = 2
 
-[node name="slot_selector2" parent="MarginContainer/VBoxContainer" unique_id=1134123162 instance=ExtResource("1_fibnn")]
+[node name="slot_selector2" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1134123162 instance=ExtResource("1_fibnn")]
 layout_mode = 2
+type = 2
 
-[node name="slot_selector3" parent="MarginContainer/VBoxContainer" unique_id=1374956868 instance=ExtResource("1_fibnn")]
+[node name="slot_selector3" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1374956868 instance=ExtResource("1_fibnn")]
 layout_mode = 2
+type = 3

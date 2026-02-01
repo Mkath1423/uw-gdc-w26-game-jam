@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Accessory" format=3 uid="uid://x4a2hd031c7n"]
+
+[ext_resource type="Texture2D" uid="uid://cv2xwuj84k334" path="res://sprites/accessories/acc_sports_2.png" id="1_m7o1i"]
+[ext_resource type="Script" uid="uid://wuf76ufyhu5v" path="res://outfits/scripts/accessory.gd" id="2_60y7q"]
+
+[resource]
+script = ExtResource("2_60y7q")
+icon = ExtResource("1_m7o1i")
+held = ExtResource("1_m7o1i")
+type = 3
+metadata/_custom_type_script = "uid://wuf76ufyhu5v"

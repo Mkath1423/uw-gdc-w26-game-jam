@@ -1,84 +1,21 @@
-[gd_scene format=3 uid="uid://bs02j5ybgumyu"]
+[gd_scene format=3 uid="uid://b5fcf0fsr5inx"]
 
 [ext_resource type="Script" uid="uid://b2gqy3upn2kg4" path="res://people/scripts/person.gd" id="1_303gn"]
-[ext_resource type="PackedScene" uid="uid://dk6qjqv42okft" path="res://outfits/scenes/shirt/shirt1.tscn" id="2_j7e3k"]
-[ext_resource type="PackedScene" uid="uid://d0qqagfvqvpna" path="res://outfits/scenes/hair/hair1.tscn" id="2_s4xmb"]
-[ext_resource type="PackedScene" uid="uid://21cljx5iw3lt" path="res://outfits/scenes/head/head1.tscn" id="3_s4xmb"]
-[ext_resource type="PackedScene" uid="uid://d0ixhd0np712d" path="res://outfits/scenes/hat/hat1.tscn" id="4_nx88u"]
-[ext_resource type="PackedScene" uid="uid://cys4m0ebitk8c" path="res://outfits/scenes/held/held1.tscn" id="6_353sk"]
+[ext_resource type="Texture2D" uid="uid://bylc6knw7bbai" path="res://sprites/accessories/body_base.png" id="2_0bxt6"]
+[ext_resource type="Texture2D" uid="uid://dokmcs5x0e4ix" path="res://sprites/accessories/head_base.png" id="3_j7e3k"]
 
 [sub_resource type="Animation" id="Animation_0bxt6"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("body_anchor:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("head_anchor:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-1, -190)]
-}
 
 [sub_resource type="Animation" id="Animation_64fyo"]
 resource_name = "idle"
 length = 4.0666666
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("head_anchor:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.40000007, 0.8, 1.2, 1.6, 2, 2.5, 2.9333332, 3.3666668, 4.0333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-1, -190), Vector2(-1, -201), Vector2(-2, -187), Vector2(0, -201), Vector2(1, -198), Vector2(-2, -202), Vector2(3, -200), Vector2(-3, -200), Vector2(-2, -190), Vector2(-3, -190)]
-}
 
 [sub_resource type="Animation" id="Animation_j7e3k"]
 resource_name = "walk"
 length = 0.73333335
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("head_anchor:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333335, 0.40000004, 0.56666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-1, -190), Vector2(0, -197.685), Vector2(-1, -210), Vector2(0, -197.685)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("body_anchor:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.20000002, 0.36666667, 0.53333336, 0.73333335),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, -7.6854134), Vector2(0, -20), Vector2(0, -7.6854134), Vector2(0, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_64fyo"]
 _data = {
@@ -87,13 +24,8 @@ _data = {
 &"walk": SubResource("Animation_j7e3k")
 }
 
-[node name="Person" type="Node2D" unique_id=67439441 node_paths=PackedStringArray("head_anchor", "hair_anchor", "hat_anchor", "shirt_anchor", "hold_anchor", "animation_player")]
+[node name="Person" type="Node2D" unique_id=67439441 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_303gn")
-head_anchor = NodePath("head_anchor/Head")
-hair_anchor = NodePath("head_anchor/Hair")
-hat_anchor = NodePath("head_anchor/Hat")
-shirt_anchor = NodePath("body_anchor/Shirt")
-hold_anchor = NodePath("body_anchor/Hold")
 animation_player = NodePath("AnimationPlayer")
 
 [node name="neck" type="Line2D" parent="." unique_id=1816298445]
@@ -103,42 +35,27 @@ width = 20.0
 texture_mode = 1
 antialiased = true
 
-[node name="head_anchor" type="Node2D" parent="." unique_id=830305045]
-position = Vector2(-1, -190)
-
-[node name="Hair" type="Node2D" parent="head_anchor" unique_id=1677138840]
-metadata/_edit_lock_ = true
-
-[node name="head_accessory" parent="head_anchor/Hair" unique_id=550483700 instance=ExtResource("2_s4xmb")]
-
-[node name="Head" type="Node2D" parent="head_anchor" unique_id=407866713]
-metadata/_edit_lock_ = true
-
-[node name="head_accessory" parent="head_anchor/Head" unique_id=1422147221 instance=ExtResource("3_s4xmb")]
-y_sort_enabled = false
-metadata/_edit_lock_ = true
-
-[node name="Hat" type="Node2D" parent="head_anchor" unique_id=1910772692]
-metadata/_edit_lock_ = true
-
-[node name="head_accessory" parent="head_anchor/Hat" unique_id=1606911772 instance=ExtResource("4_nx88u")]
-y_sort_enabled = true
-
-[node name="body_anchor" type="Node2D" parent="." unique_id=1260639037]
-
-[node name="Shirt" type="Node2D" parent="body_anchor" unique_id=1632560326]
-metadata/_edit_lock_ = true
-
-[node name="body_accessory" parent="body_anchor/Shirt" unique_id=448401703 instance=ExtResource("2_j7e3k")]
-position = Vector2(-1, 5.6854134)
-
-[node name="Hold" type="Node2D" parent="body_anchor" unique_id=926230128]
-metadata/_edit_lock_ = true
-
-[node name="body_accessory" parent="body_anchor/Hold" unique_id=109406040 instance=ExtResource("6_353sk")]
-
-[node name="neck-anchor" type="Node2D" parent="body_anchor" unique_id=1420256485]
-position = Vector2(1, -149)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=688074669]
 libraries/ = SubResource("AnimationLibrary_64fyo")
+
+[node name="visuals" type="Node2D" parent="." unique_id=966006404]
+
+[node name="head_back" type="Node2D" parent="visuals" unique_id=761372190]
+
+[node name="hair_back" type="Sprite2D" parent="visuals/head_back" unique_id=133750575]
+
+[node name="body" type="Node2D" parent="visuals" unique_id=959444831]
+
+[node name="shirt" type="Sprite2D" parent="visuals/body" unique_id=2067536679]
+texture = ExtResource("2_0bxt6")
+
+[node name="held" type="Sprite2D" parent="visuals/body" unique_id=1766850204]
+
+[node name="head_front" type="Node2D" parent="visuals" unique_id=375623128]
+
+[node name="head" type="Sprite2D" parent="visuals/head_front" unique_id=382121449]
+texture = ExtResource("3_j7e3k")
+
+[node name="hair_front" type="Sprite2D" parent="visuals/head_front" unique_id=384590717]
+
+[node name="hat" type="Sprite2D" parent="visuals/head_front" unique_id=1288847046]
