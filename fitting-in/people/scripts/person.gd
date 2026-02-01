@@ -7,6 +7,12 @@ class_name Person extends Node2D
 @export var shirt_anchor : Node2D
 @export var hold_anchor : Node2D
 
+@export var neck_anchor : Node2D
+@export var neck : Line2D
+
+@export var animation_player : AnimationPlayer
+
+
 func _replace(anchor : Node2D, with : PackedScene):
 	for c in anchor.get_children():
 		c.queue_free()
@@ -29,15 +35,12 @@ func set_accessory(accessory : BaseAccessory):
 		_:
 			pass
 
-func set_facing(_dir : Vector2):
-	pass
-	# if dir.y < 0:
-	#     head_anchor.z_index = 0
-	#     hair_anchor.z_index = 0
-	#     hat_anchor.z_index = 0
+func set_animation_walking():
+	animation_player.play("walk")
+	animation_player.speed_scale = 4
 
-	#     shirt_anchor.z_index = 0
-	#     hold_anchor.z_index = 0
+func set_animation_idle():
+	animation_player.play("idle")
 
-	# else:
-	#     pass
+func clear_animation():
+	animation_player.stop()

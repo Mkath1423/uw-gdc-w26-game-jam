@@ -19,6 +19,10 @@ func _physics_process(delta: float) -> void:
 	var move_by = accel
 	if input_dir.length_squared() < 0.01 * 0.01:
 		move_by = stopping
+		person.clear_animation()
+
+	elif person.animation_player.current_animation != "walk":
+		person.set_animation_walking()
 
 	velocity = velocity.move_toward(input_dir * base_speed, move_by * delta)
 
@@ -35,7 +39,7 @@ func set_outfit():
 		GameState.player_inventory.helds.get_current())
 
 func on_stress_changed():
-	print_debug("STRESSED %d" % GameState.stress) 
+	print_debug("STRESSED %d" % GameState.player_stress.stress) 
 
 func on_outfit_changed():
 	print_debug("TODO: CHANGE THE OUTFIT")
