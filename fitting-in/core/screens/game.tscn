@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://ybbkoy62jbo4"]
 
 [ext_resource type="Script" uid="uid://c2lj1lkoypf8g" path="res://core/screens/game.gd" id="1_jnguy"]
+[ext_resource type="PackedScene" uid="uid://blv0px8f4twsv" path="res://levels/level0/level0.tscn" id="2_egxou"]
+[ext_resource type="Script" uid="uid://dae23q3dkciao" path="res://core/screens/stress_manager.gd" id="3_w6s28"]
 
-[node name="Game" type="Node2D" unique_id=2145803963]
+[node name="Game" type="Node2D" unique_id=2145803963 node_paths=PackedStringArray("level_parent")]
 script = ExtResource("1_jnguy")
+level_parent = NodePath("Level")
 
 [node name="Level" type="Node" parent="." unique_id=759549222]
+
+[node name="Node2" parent="Level" unique_id=869372501 instance=ExtResource("2_egxou")]
+
+[node name="stress_manager" type="Node" parent="." unique_id=1361253676]
+script = ExtResource("3_w6s28")

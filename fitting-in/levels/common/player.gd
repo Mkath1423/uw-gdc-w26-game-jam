@@ -35,7 +35,7 @@ func set_outfit():
 		GameState.player_inventory.helds.get_current())
 
 func on_stress_changed():
-	print_debug("STRESSED %d" % GameState.stress) 
+	print_debug("STRESSED %d" % GameState.player_stress.stress) 
 
 func on_outfit_changed():
 	print_debug("TODO: CHANGE THE OUTFIT")
