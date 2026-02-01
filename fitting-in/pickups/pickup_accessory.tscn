@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dyhqt4j7v7xjy"]
+
+[ext_resource type="Script" uid="uid://hfnn1ud8s72o" path="res://pickups/pickup_accessory.gd" id="1_40n5n"]
+[ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="2_0aa2w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_678kr"]
+radius = 114.07015
+
+[node name="PickupAccessory" type="Node2D" unique_id=1732428147]
+script = ExtResource("1_40n5n")
+
+[node name="PlayerDetect" parent="." unique_id=1675569352 instance=ExtResource("2_0aa2w")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect" unique_id=1076343488]
+shape = SubResource("CircleShape2D_678kr")
+
+[connection signal="player_enter" from="PlayerDetect" to="." method="_on_player_detect_player_enter"]
