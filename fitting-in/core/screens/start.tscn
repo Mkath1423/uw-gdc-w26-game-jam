@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4t8mq6f1dbx2" path="res://sprites/start_button.png" id="3_jb7kb"]
 [ext_resource type="Texture2D" uid="uid://0daex3y8you0" path="res://sprites/credits_button.png" id="4_l7qoy"]
 [ext_resource type="Texture2D" uid="uid://clnp5fxsroqlb" path="res://sprites/controls_button.png" id="5_jb7kb"]
+[ext_resource type="AudioStream" uid="uid://bd18hy4x2rag" path="res://audio/intro.ogg" id="6_l7qoy"]
 
 [node name="Start" type="Node2D" unique_id=1901608288]
 position = Vector2(529, 321)
@@ -45,6 +46,10 @@ offset_left = 46.0
 offset_top = -14.0
 offset_right = 242.0
 offset_bottom = 45.0
+
+[node name="IntroMusic" type="AudioStreamPlayer2D" parent="." unique_id=75416935]
+stream = ExtResource("6_l7qoy")
+volume_db = -20.0
 
 [connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Credits_button" to="." method="_on_credits_button_pressed"]
