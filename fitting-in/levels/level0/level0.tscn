@@ -2,6 +2,9 @@
 
 [ext_resource type="TileSet" uid="uid://nb40i15f0sok" path="res://sprites/tiles/walls.tres" id="1_be24l"]
 [ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="2_6ncff"]
+[ext_resource type="PackedScene" uid="uid://dyhqt4j7v7xjy" path="res://pickups/pickup_accessory.tscn" id="3_xs64s"]
+[ext_resource type="Resource" uid="uid://lspafseqw1rk" path="res://outfits/scenes/hat/hat1.tres" id="4_cc8vf"]
+[ext_resource type="PackedScene" uid="uid://d0ixhd0np712d" path="res://outfits/scenes/hat/hat1.tscn" id="5_jp3pu"]
 
 [node name="level0" type="Node" unique_id=869372501]
 
@@ -16,3 +19,9 @@ position = Vector2(4121, 789)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2089778737]
 position = Vector2(1890, 626)
 zoom = Vector2(0.16, 0.16)
+
+[node name="PickupAccessory" parent="." unique_id=1732428147 instance=ExtResource("3_xs64s")]
+position = Vector2(2069, 470)
+accessory = ExtResource("4_cc8vf")
+
+[node name="head_accessory" parent="PickupAccessory" unique_id=550483700 instance=ExtResource("5_jp3pu")]

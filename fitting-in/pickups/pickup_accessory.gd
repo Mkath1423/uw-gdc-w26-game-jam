@@ -4,4 +4,4 @@ extends Node2D
 
 func _on_player_detect_player_enter() -> void:
 	GameState.player_inventory.add_item(accessory)
-	pass
+	queue_free()
