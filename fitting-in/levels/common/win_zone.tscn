@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cte0j72n55b6n"]
+
+[ext_resource type="Script" uid="uid://bdthq8hy68su7" path="res://levels/common/win_zone.gd" id="1_04okw"]
+[ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="2_nher0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw83f"]
+size = Vector2(329, 643)
+
+[node name="WinZone" type="Node2D" unique_id=374289698]
+script = ExtResource("1_04okw")
+
+[node name="PlayerDetect" parent="." unique_id=1675569352 instance=ExtResource("2_nher0")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect" unique_id=152787063]
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_bw83f")
+
+[connection signal="player_enter" from="PlayerDetect" to="." method="_on_player_detect_player_enter"]
