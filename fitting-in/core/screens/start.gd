@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready() -> void:
+	$IntroMusic.play()
+
 func _on_start_button_pressed() -> void:
 	SceneManager.swap_screen(SceneManager.Screen.Game)
 
