@@ -37,11 +37,17 @@ alignment = 1
 
 [node name="slot_selector" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2133742375 instance=ExtResource("1_fibnn")]
 layout_mode = 2
+pos_action = "hat+"
+neg_action = "hat-"
 
 [node name="slot_selector2" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1134123162 instance=ExtResource("1_fibnn")]
 layout_mode = 2
 type = 2
+pos_action = "shirt+"
+neg_action = "shirt-"
 
 [node name="slot_selector3" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1374956868 instance=ExtResource("1_fibnn")]
 layout_mode = 2
 type = 3
+pos_action = "held+"
+neg_action = "held-"
