@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_11i7i")
+icon = ExtResource("2_otfhl")
 shirt = ExtResource("2_otfhl")
 type = 2
 metadata/_custom_type_script = "uid://wuf76ufyhu5v"
