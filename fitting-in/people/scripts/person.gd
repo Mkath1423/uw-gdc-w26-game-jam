@@ -7,7 +7,11 @@ class_name Person extends Node2D
 @export var shirt_anchor : Node2D
 @export var hold_anchor : Node2D
 
+@export var neck_anchor : Node2D
+@export var neck : Line2D
+
 @export var animation_player : AnimationPlayer
+
 
 func _replace(anchor : Node2D, with : PackedScene):
 	for c in anchor.get_children():
