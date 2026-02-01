@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://blv0px8f4twsv"]
 
 [ext_resource type="TileSet" uid="uid://nb40i15f0sok" path="res://sprites/tiles/walls.tres" id="1_be24l"]
-[ext_resource type="Script" path="res://levels/common/levelx.gd" id="1_bgjy1"]
+[ext_resource type="Script" uid="uid://qv4sgwuj463c" path="res://levels/common/levelx.gd" id="1_bgjy1"]
 [ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="2_6ncff"]
 [ext_resource type="PackedScene" uid="uid://34poimboyebg" path="res://ui/outfit_selector/outfit_selector.tscn" id="4_bgjy1"]
 [ext_resource type="Script" uid="uid://dnla2gsrd5vk" path="res://people/scripts/group.gd" id="4_yixou"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="6_i6754"]
 [ext_resource type="PackedScene" uid="uid://b5fcf0fsr5inx" path="res://people/person.tscn" id="7_yc6rf"]
 [ext_resource type="Texture2D" uid="uid://dybf7q6a2g6n1" path="res://sprites/tiles/flag.png" id="10_i6754"]
+[ext_resource type="AudioStream" uid="uid://byqjkooi8jfm3" path="res://audio/talking_loop.ogg" id="11_yc6rf"]
+[ext_resource type="Script" uid="uid://cjek2vj2s563y" path="res://levels/level0/level0_game_music.gd" id="12_8hfpy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3yx6"]
 size = Vector2(2038, 957)
@@ -259,6 +261,12 @@ shape = SubResource("RectangleShape2D_8hfpy")
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=977399203]
 position = Vector2(-766, 804)
 texture = ExtResource("10_i6754")
+
+[node name="GameMusic" type="AudioStreamPlayer2D" parent="." unique_id=2021143353]
+stream = ExtResource("11_yc6rf")
+volume_db = -10.0
+max_distance = 2000000.0
+script = ExtResource("12_8hfpy")
 
 [connection signal="player_enter" from="Group/PlayerDetect" to="Group" method="_on_player_detect_player_enter"]
 [connection signal="player_exit" from="Group/PlayerDetect" to="Group" method="_on_player_detect_player_exit"]
