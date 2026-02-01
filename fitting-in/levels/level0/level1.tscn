@@ -424,6 +424,7 @@ texture = ExtResource("12_2eibq")
 
 [node name="GameMusic" type="AudioStreamPlayer2D" parent="." unique_id=500535481]
 stream = ExtResource("13_iudd3")
+volume_db = -10.0
 max_distance = 20000000.0
 script = ExtResource("14_0i3oh")
 
