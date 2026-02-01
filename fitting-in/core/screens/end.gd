@@ -1,7 +1,4 @@
 extends Node2D
 
-func _ready():
-	end_game()
-	
-func end_game():
-	get_tree().quit()
+func _on_texture_button_pressed() -> void:
+	SceneManager.swap_screen(SceneManager.Screen.Start)

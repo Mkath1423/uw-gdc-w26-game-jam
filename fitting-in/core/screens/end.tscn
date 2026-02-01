@@ -1,11 +1,23 @@
 [gd_scene format=3 uid="uid://bqptrjuqw43py"]
 
+[ext_resource type="Script" uid="uid://dtmrqqrmm7v1g" path="res://core/screens/end.gd" id="1_nhlfl"]
+[ext_resource type="Texture2D" uid="uid://btdolonr2rmnp" path="res://sprites/ui/arrow_right.png" id="2_ahi3i"]
 [ext_resource type="Texture2D" uid="uid://clgy3l86dc7x8" path="res://sprites/endcard.png" id="2_e4qg6"]
 
 [node name="End" type="Node2D" unique_id=2128442876]
+script = ExtResource("1_nhlfl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2004691997]
 texture = ExtResource("2_e4qg6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=794573652]
 zoom = Vector2(0.6, 0.6)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1534334586]
+offset_left = 302.0
+offset_top = -406.0
+offset_right = 352.0
+offset_bottom = -340.0
+texture_normal = ExtResource("2_ahi3i")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
