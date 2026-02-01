@@ -25,29 +25,27 @@ texture = ExtResource("4_l7qoy")
 position = Vector2(144, 16)
 texture = ExtResource("5_jb7kb")
 
-[node name="Start_button" type="Button" parent="." unique_id=313881148]
-offset_left = -234.5
-offset_top = -17.0
-offset_right = -41.5
-offset_bottom = 44.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Credits_button" type="Button" parent="." unique_id=1899335177]
-offset_left = -82.0
-offset_top = 89.0
-offset_right = 111.0
-offset_bottom = 150.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Controls_button" type="Button" parent="." unique_id=949947750]
-offset_left = 46.0
-offset_top = -18.0
-offset_right = 240.0
-offset_bottom = 51.0
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=539447595]
 zoom = Vector2(0.8, 0.8)
 
-[connection signal="pressed" from="Start_button" to="." method="_on_button_pressed"]
+[node name="Start_button" type="TextureButton" parent="." unique_id=1722036397]
+offset_left = -236.0
+offset_top = -21.0
+offset_right = -39.0
+offset_bottom = 50.0
+
+[node name="Credits_button" type="TextureButton" parent="." unique_id=1691462113]
+offset_left = -83.0
+offset_top = 85.0
+offset_right = 112.0
+offset_bottom = 156.0
+
+[node name="Controls_button" type="TextureButton" parent="." unique_id=1199359877]
+offset_left = 46.0
+offset_top = -14.0
+offset_right = 242.0
+offset_bottom = 45.0
+
+[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Controls_button" to="." method="_on_controls_button_pressed"]
