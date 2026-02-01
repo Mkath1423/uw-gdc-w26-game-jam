@@ -1,7 +1,10 @@
 extends Node2D
 
 var levels : Array[PackedScene] = [
-	load("res://levels/level0/level0.tscn")
+	load("res://levels/level0/level0.tscn"),
+	load("res://levels/level0/level1.tscn"),
+	load("res://levels/level0/level2.tscn"),
+	load("res://levels/level0/level3.tscn")
 ]
 
 
@@ -30,7 +33,7 @@ func restore_inventory():
 	GameState.player_inventory.helds = backup_inventory.helds.duplicate()
 
 
-func load_current_level():
+func load_current_level_impl():
 	for c in level_parent.get_children():
 		c.queue_free()
 	
@@ -38,6 +41,9 @@ func load_current_level():
 	level_parent.add_child(new_level)
 	new_level.level_over.connect(next_level)
 	restore_inventory()
+
+func load_current_level():
+	call_deferred("load_current_level_impl")
 
 
 func next_level():

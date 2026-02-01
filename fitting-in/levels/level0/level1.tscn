@@ -1,0 +1,255 @@
+[gd_scene format=4 uid="uid://bkutgdmt43u8t"]
+
+[ext_resource type="Script" path="res://levels/common/levelx.gd" id="1_q1qgi"]
+[ext_resource type="TileSet" uid="uid://nb40i15f0sok" path="res://sprites/tiles/walls.tres" id="2_pbg28"]
+[ext_resource type="PackedScene" uid="uid://du54himqbpbx1" path="res://levels/common/player.tscn" id="3_wbyhu"]
+[ext_resource type="Script" uid="uid://dnla2gsrd5vk" path="res://people/scripts/group.gd" id="4_2eibq"]
+[ext_resource type="Resource" uid="uid://buf8hmuhnb0tt" path="res://outfits/resources/hats/hat2.tres" id="5_wbyhu"]
+[ext_resource type="PackedScene" uid="uid://flnq5yp1wt3n" path="res://levels/common/player_detect.tscn" id="6_0i3oh"]
+[ext_resource type="PackedScene" uid="uid://b5fcf0fsr5inx" path="res://people/person.tscn" id="7_at1kt"]
+[ext_resource type="Resource" uid="uid://baqgdrqe78py8" path="res://outfits/resources/shirts/shirt1.tres" id="8_2eibq"]
+[ext_resource type="PackedScene" uid="uid://cte0j72n55b6n" path="res://levels/common/win_zone.tscn" id="8_q7v41"]
+[ext_resource type="PackedScene" uid="uid://34poimboyebg" path="res://ui/outfit_selector/outfit_selector.tscn" id="9_i6cp7"]
+[ext_resource type="Resource" uid="uid://swgt6cj8sfyf" path="res://outfits/resources/hold/held3.tres" id="9_iudd3"]
+[ext_resource type="Texture2D" uid="uid://dybf7q6a2g6n1" path="res://sprites/tiles/flag.png" id="12_2eibq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3yx6"]
+size = Vector2(500, 957)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yixou"]
+size = Vector2(4326, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6754"]
+size = Vector2(472.5, 345)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc6rf"]
+size = Vector2(472.5, 345)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hfpy"]
+size = Vector2(472.5, 635.5)
+
+[node name="level0" type="Node2D" unique_id=419732774]
+y_sort_enabled = true
+script = ExtResource("1_q1qgi")
+
+[node name="tilemap" type="Node2D" parent="." unique_id=1064787790]
+
+[node name="floor" type="TileMapLayer" parent="tilemap" unique_id=1495034354]
+z_index = -1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAQAAIABQAAAAAAAAAOAAMABQAAAAAAAAANAAMABQAAAAAAAAAMAAMABQAAAAAAAAALAAMABQAAAAAAAAAKAAMABQAAAAAAAAAJAAMABQAAAAAAAAAIAAMABQAAAAAAAAAHAAMABQAAAAAAAAAGAAMABQAAAAAAAAAFAAMABQAAAAAAAAAEAAMABQAAAAAAAAADAAMABQAAAAAAAAACAAMABQAAAAAAAAABAAMABQAAAAAAAAAAAAMABQAAAAAAAAD//wMABQAAAAAAAAD//wIABQAAAAAAAAAPAAIABQAAAAAAAAAOAAIABQAAAAAAAAANAAIABQAAAAAAAAAMAAIABQAAAAAAAAALAAIABQAAAAAAAAAKAAIABQAAAAAAAAAJAAIABQAAAAAAAAAIAAIABQAAAAAAAAAHAAIABQAAAAAAAAAGAAIABQAAAAAAAAAFAAIABQAAAAAAAAAEAAIABQAAAAAAAAADAAIABQAAAAAAAAACAAIABQAAAAAAAAABAAIABQAAAAAAAAAAAAIABQAAAAAAAAASAAMABQAAAAAAAAARAAMABQAAAAAAAAAQAAMABQAAAAAAAAAPAAMABQAAAAAAAAD9/wMABQAAAAAAAAD+/wMABQAAAAAAAAAAAAQABQAAAAAAAAD//wQABQAAAAAAAAD+/wQABQAAAAAAAAABAAQABQAAAAAAAAACAAQABQAAAAAAAAADAAQABQAAAAAAAAAEAAQABQAAAAAAAAAFAAQABQAAAAAAAAAGAAQABQAAAAAAAAAHAAQABQAAAAAAAAAIAAQABQAAAAAAAAAJAAQABQAAAAAAAAAKAAQABQAAAAAAAAALAAQABQAAAAAAAAAMAAQABQAAAAAAAAANAAQABQAAAAAAAAAOAAQABQAAAAAAAAAPAAQABQAAAAAAAAAQAAQABQAAAAAAAAARAAQABQAAAAAAAAASAAQABQAAAAAAAAD9/wQABQAAAAAAAAD//wUABQAAAAAAAAAAAAUABQAAAAAAAAABAAUABQAAAAAAAAACAAUABQAAAAAAAAADAAUABQAAAAAAAAAEAAUABQAAAAAAAAAFAAUABQAAAAAAAAAGAAUABQAAAAAAAAAHAAUABQAAAAAAAAAIAAUABQAAAAAAAAAJAAUABQAAAAAAAAAKAAUABQAAAAAAAAALAAUABQAAAAAAAAAMAAUABQAAAAAAAAANAAUABQAAAAAAAAAOAAUABQAAAAAAAAAPAAUABQAAAAAAAAAQAAUABQAAAAAAAAA=")
+tile_set = ExtResource("2_pbg28")
+
+[node name="walls" type="TileMapLayer" parent="tilemap" unique_id=810535267]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD+/wAAAAAAAAAAAAD9/wAAAQAAAAAAAAD+/wIABAAAAAAAAAD9/wIABAAAAAAAAAD//wEAAgAAAAAAAAAAAAEAAgAAAAAAAAABAAEAAgAAAAAAAAACAAEAAgAAAAAAAAADAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAAFAAEAAgAAAAAAAAAGAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAIAAEAAgAAAAAAAAAJAAEAAgAAAAAAAAAKAAEAAgAAAAAAAAALAAEAAgAAAAAAAAAMAAEAAgAAAAAAAAANAAEAAgAAAAAAAAAOAAEAAgAAAAAAAAAPAAEAAgAAAAAAAAAQAAEAAgAAAAAAAAASAAIAAgAAAAAAAAARAAIAAgAAAAAAAAAAAP//AQAAAAAAAAD/////AQAAAAAAAAABAP//AQAAAAAAAAACAP//AQAAAAAAAAADAP//AQAAAAAAAAAEAP//AQAAAAAAAAAFAP//AQAAAAAAAAAGAP//AQAAAAAAAAAHAP//AQAAAAAAAAAIAP//AQAAAAAAAAAJAP//AQAAAAAAAAAKAP//AQAAAAAAAAALAP//AQAAAAAAAAAMAP//AQAAAAAAAAANAP//AQAAAAAAAAAOAP//AQAAAAAAAAAPAP//AQAAAAAAAAAQAP//AQAAAAAAAAASAAAAAQAAAAAAAAD+////AAAAAAAAADARAP//AAAAAAAAAGARAAAAAAAAAAAAAFA=")
+tile_set = ExtResource("2_pbg28")
+
+[node name="Player" parent="." unique_id=1015663847 instance=ExtResource("3_wbyhu")]
+z_as_relative = false
+position = Vector2(4380, 991)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2089778737]
+position = Vector2(1890, 626)
+zoom = Vector2(0.16, 0.16)
+
+[node name="Group" type="Node2D" parent="." unique_id=1066614569 node_paths=PackedStringArray("people")]
+y_sort_enabled = true
+position = Vector2(2037, 925)
+script = ExtResource("4_2eibq")
+hat = ExtResource("5_wbyhu")
+people = NodePath("people")
+
+[node name="PlayerDetect" parent="Group" unique_id=1675569352 instance=ExtResource("6_0i3oh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Group/PlayerDetect" unique_id=171260744]
+position = Vector2(-11, 32)
+shape = SubResource("RectangleShape2D_d3yx6")
+
+[node name="people" type="Node2D" parent="Group" unique_id=846260116]
+y_sort_enabled = true
+position = Vector2(-1, 7)
+
+[node name="Person5" parent="Group/people" unique_id=67439441 instance=ExtResource("7_at1kt")]
+position = Vector2(-17, -19)
+
+[node name="Person6" parent="Group/people" unique_id=1584014847 instance=ExtResource("7_at1kt")]
+position = Vector2(-105, 115)
+
+[node name="Person7" parent="Group/people" unique_id=914432241 instance=ExtResource("7_at1kt")]
+position = Vector2(90, 257)
+
+[node name="Person8" parent="Group/people" unique_id=1913566202 instance=ExtResource("7_at1kt")]
+position = Vector2(-67, 308)
+
+[node name="Person9" parent="Group/people" unique_id=984878856 instance=ExtResource("7_at1kt")]
+position = Vector2(-173, 432)
+
+[node name="Person10" parent="Group/people" unique_id=1832527547 instance=ExtResource("7_at1kt")]
+position = Vector2(135, 429)
+
+[node name="Person11" parent="Group/people" unique_id=228711721 instance=ExtResource("7_at1kt")]
+position = Vector2(160, 4)
+
+[node name="Person12" parent="Group/people" unique_id=1481626117 instance=ExtResource("7_at1kt")]
+position = Vector2(140, -231)
+
+[node name="Person13" parent="Group/people" unique_id=71797913 instance=ExtResource("7_at1kt")]
+position = Vector2(-163, -309)
+
+[node name="Person14" parent="Group/people" unique_id=1093695003 instance=ExtResource("7_at1kt")]
+position = Vector2(-160, -84)
+
+[node name="Person15" parent="Group/people" unique_id=967688568 instance=ExtResource("7_at1kt")]
+position = Vector2(-3, -306)
+
+[node name="Person16" parent="Group/people" unique_id=1974379130 instance=ExtResource("7_at1kt")]
+position = Vector2(141, -309)
+
+[node name="Group2" type="Node2D" parent="." unique_id=192252189 node_paths=PackedStringArray("people")]
+y_sort_enabled = true
+position = Vector2(1527, 925)
+script = ExtResource("4_2eibq")
+shirt = ExtResource("8_2eibq")
+people = NodePath("people")
+
+[node name="PlayerDetect" parent="Group2" unique_id=2045652482 instance=ExtResource("6_0i3oh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Group2/PlayerDetect" unique_id=1368519962]
+position = Vector2(-11, 32)
+shape = SubResource("RectangleShape2D_d3yx6")
+
+[node name="people" type="Node2D" parent="Group2" unique_id=386547096]
+y_sort_enabled = true
+position = Vector2(-1, 7)
+
+[node name="Person5" parent="Group2/people" unique_id=1982714753 instance=ExtResource("7_at1kt")]
+position = Vector2(-17, -19)
+
+[node name="Person6" parent="Group2/people" unique_id=1783544872 instance=ExtResource("7_at1kt")]
+position = Vector2(-133, 130)
+
+[node name="Person7" parent="Group2/people" unique_id=511125038 instance=ExtResource("7_at1kt")]
+position = Vector2(39, 163)
+
+[node name="Person8" parent="Group2/people" unique_id=2019433353 instance=ExtResource("7_at1kt")]
+position = Vector2(-82, 292)
+
+[node name="Person9" parent="Group2/people" unique_id=2070486335 instance=ExtResource("7_at1kt")]
+position = Vector2(82, 391)
+
+[node name="Person10" parent="Group2/people" unique_id=1256545717 instance=ExtResource("7_at1kt")]
+position = Vector2(-176, 459)
+
+[node name="Person11" parent="Group2/people" unique_id=1298712161 instance=ExtResource("7_at1kt")]
+position = Vector2(-181, -264)
+
+[node name="Person12" parent="Group2/people" unique_id=1251898969 instance=ExtResource("7_at1kt")]
+position = Vector2(-34, -297)
+
+[node name="Person13" parent="Group2/people" unique_id=1651997953 instance=ExtResource("7_at1kt")]
+position = Vector2(161, -252)
+
+[node name="Person14" parent="Group2/people" unique_id=797220541 instance=ExtResource("7_at1kt")]
+position = Vector2(141, -108)
+
+[node name="Person15" parent="Group2/people" unique_id=675591264 instance=ExtResource("7_at1kt")]
+position = Vector2(159, 69)
+
+[node name="Group3" type="Node2D" parent="." unique_id=2136712656 node_paths=PackedStringArray("people")]
+y_sort_enabled = true
+position = Vector2(1012, 925)
+script = ExtResource("4_2eibq")
+held = ExtResource("9_iudd3")
+people = NodePath("people")
+
+[node name="PlayerDetect" parent="Group3" unique_id=627003833 instance=ExtResource("6_0i3oh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Group3/PlayerDetect" unique_id=1877467446]
+position = Vector2(-11, 32)
+shape = SubResource("RectangleShape2D_d3yx6")
+
+[node name="people" type="Node2D" parent="Group3" unique_id=1046444648]
+y_sort_enabled = true
+position = Vector2(-1, 7)
+
+[node name="Person5" parent="Group3/people" unique_id=1297364635 instance=ExtResource("7_at1kt")]
+position = Vector2(-17, -19)
+
+[node name="Person6" parent="Group3/people" unique_id=625037474 instance=ExtResource("7_at1kt")]
+position = Vector2(-136, 125)
+
+[node name="Person7" parent="Group3/people" unique_id=1930419663 instance=ExtResource("7_at1kt")]
+position = Vector2(59, 216)
+
+[node name="Person8" parent="Group3/people" unique_id=1324816816 instance=ExtResource("7_at1kt")]
+position = Vector2(115, 72)
+
+[node name="Person9" parent="Group3/people" unique_id=95584644 instance=ExtResource("7_at1kt")]
+position = Vector2(130, -188)
+
+[node name="Person10" parent="Group3/people" unique_id=1059355351 instance=ExtResource("7_at1kt")]
+position = Vector2(-82, -289)
+
+[node name="Person11" parent="Group3/people" unique_id=1369182297 instance=ExtResource("7_at1kt")]
+position = Vector2(-183, -350)
+
+[node name="Person12" parent="Group3/people" unique_id=1491385392 instance=ExtResource("7_at1kt")]
+position = Vector2(-186, -140)
+
+[node name="Person13" parent="Group3/people" unique_id=719175254 instance=ExtResource("7_at1kt")]
+position = Vector2(-173, 302)
+
+[node name="Person14" parent="Group3/people" unique_id=1617008591 instance=ExtResource("7_at1kt")]
+position = Vector2(-74, 363)
+
+[node name="Person15" parent="Group3/people" unique_id=1832895834 instance=ExtResource("7_at1kt")]
+position = Vector2(121, 446)
+
+[node name="Person16" parent="Group3/people" unique_id=1817182203 instance=ExtResource("7_at1kt")]
+position = Vector2(-180, 474)
+
+[node name="Person17" parent="Group3/people" unique_id=1206144590 instance=ExtResource("7_at1kt")]
+position = Vector2(108, 353)
+
+[node name="Person18" parent="Group3/people" unique_id=583071005 instance=ExtResource("7_at1kt")]
+position = Vector2(83, -319)
+
+[node name="WinZone" parent="." unique_id=374289698 instance=ExtResource("8_q7v41")]
+position = Vector2(-830, 931)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1910225651]
+layer = 2
+
+[node name="OutfitSelector" parent="CanvasLayer" unique_id=1551711159 instance=ExtResource("9_i6cp7")]
+scale = Vector2(0.32708964, 0.3200009)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1266108133]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=868025811]
+position = Vector2(1921, 1499)
+shape = SubResource("RectangleShape2D_yixou")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=95785546]
+position = Vector2(4321.75, 1375)
+shape = SubResource("RectangleShape2D_i6754")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1047933613]
+position = Vector2(-475, 1374)
+shape = SubResource("RectangleShape2D_yc6rf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1926950280]
+position = Vector2(4800, 911.25)
+shape = SubResource("RectangleShape2D_8hfpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1554855664]
+position = Vector2(-775, 818)
+texture = ExtResource("12_2eibq")
+
+[connection signal="player_enter" from="Group/PlayerDetect" to="Group" method="_on_player_detect_player_enter"]
+[connection signal="player_exit" from="Group/PlayerDetect" to="Group" method="_on_player_detect_player_exit"]
+[connection signal="player_enter" from="Group2/PlayerDetect" to="Group2" method="_on_player_detect_player_enter"]
+[connection signal="player_exit" from="Group2/PlayerDetect" to="Group2" method="_on_player_detect_player_exit"]
+[connection signal="player_enter" from="Group3/PlayerDetect" to="Group3" method="_on_player_detect_player_enter"]
+[connection signal="player_exit" from="Group3/PlayerDetect" to="Group3" method="_on_player_detect_player_exit"]
+[connection signal="entered_win_zone" from="WinZone" to="." method="_on_win_zone_entered_win_zone"]
