@@ -49,7 +49,8 @@ func next_level():
 	current_level += 1
 	if current_level == levels.size():
 		SceneManager.swap_screen(SceneManager.Screen.End)
-
+		RenderingServer.set_default_clear_color($stress_manager.safe_color)
+		
 	else:
 		 # save_inventory()
 		load_current_level()
