@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://dk6qjqv42okft"]
-
-[ext_resource type="PackedScene" uid="uid://b1o43ghaxrh1s" path="res://outfits/scenes/shirt/shirt_accessory.tscn" id="1_suxdx"]
-[ext_resource type="Texture2D" uid="uid://bylc6knw7bbai" path="res://sprites/body_base.png" id="2_e17c5"]
-
-[node name="body_accessory" unique_id=550483700 instance=ExtResource("1_suxdx")]
-
-[node name="shirt" parent="offset" parent_id_path=PackedInt32Array(1241458596) index="0" unique_id=842838158]
-texture = ExtResource("2_e17c5")

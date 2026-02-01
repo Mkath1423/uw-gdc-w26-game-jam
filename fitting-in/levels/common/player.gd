@@ -11,6 +11,8 @@ func _ready() -> void:
 	GameState.player_stress.stress_updated.connect(on_stress_changed)
 	GameState.player_inventory.outfit_changed.connect(on_outfit_changed)
 
+	set_outfit()
+
 func _physics_process(delta: float) -> void:
 	var input_dir = Vector2(
 		Input.get_axis("left", "right"), 
@@ -43,4 +45,4 @@ func on_stress_changed():
 	pass
 
 func on_outfit_changed():
-	print_debug("TODO: CHANGE THE OUTFIT")
+	set_outfit()

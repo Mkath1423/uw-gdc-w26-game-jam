@@ -2,17 +2,14 @@ extends Node2D
 
 @export var stress_rate : float = 10
 
-@export var hat : BaseAccessory
-@export var shirt : BaseAccessory
-@export var held : BaseAccessory
+@export var hat : Accessory
+@export var shirt : Accessory
+@export var held : Accessory
 
 @export var people : Node 
 
-var randomHat = load("res://outfits/scenes/hat/random_hat.tres")
-var randomShirt = load("res://outfits/scenes/shirt/random_shirt.tres")
-var randomHeld = load("res://outfits/scenes/held/random_held.tres")
-
 var isPlayerMatching = false
+var isPlayerIn = false
 
 # I need a long line. Editor is being weird.
 # Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis Dontmindthis 
@@ -21,33 +18,34 @@ func _ready():
 
 	for c in people.get_children():
 		if c is Person:
-			c.set_accessory(hat if hat != null else randomHat)
-			c.set_accessory(shirt if shirt != null else randomShirt)
-			c.set_accessory(held if held != null else randomHeld)
+			c.set_accessory(hat)
+			c.set_accessory(shirt)
+			c.set_accessory(held)
 
 # All player accessories must match group accessories,
 # except for random group accessories
 func player_inventory_matches() -> bool:
-	if (GameState.player_inventory.hats.get_current() != hat
-	and hat != randomHat):
+	if (hat != null and GameState.player_inventory.hats.get_current() != hat):
 		return false
 	
-	if (GameState.player_inventory.shirts.get_current() != shirt
-	and shirt != randomShirt):
+	if (shirt != null and GameState.player_inventory.shirts.get_current() != shirt):
 		return false
 	
-	if (GameState.player_inventory.helds.get_current() != held
-	and held != randomHeld):
+	if (held != null and GameState.player_inventory.helds.get_current() != held):
 		return false
 	
 	return true
 
 func _on_player_detect_player_enter() -> void:
 	self.isPlayerMatching = player_inventory_matches()
+	isPlayerIn = true
 	if not self.isPlayerMatching:
 		GameState.player_stress.set_stressed()
 
 func _on_player_detect_player_inventory_change() -> void:
+	if not isPlayerIn:
+		return
+		
 	var wasPlayerPreviouslyMatching = self.isPlayerMatching
 	self.isPlayerMatching = player_inventory_matches()
 	# No change in matching, no updates needed.
@@ -63,6 +61,9 @@ func _on_player_detect_player_inventory_change() -> void:
 
 func _on_player_detect_player_exit() -> void:
 	self.isPlayerMatching = player_inventory_matches()
+
 	if not self.isPlayerMatching:
 		# Call the increase player stress method
 		GameState.player_stress.unset_stressed()
+	
+	isPlayerIn = false

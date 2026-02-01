@@ -9,3 +9,4 @@ func _process(delta: float) -> void:
 	amount *= delta
 
 	GameState.player_stress.add_stress(amount)
+	print( GameState.player_stress.sem_is_stressed)

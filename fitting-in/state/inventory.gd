@@ -7,6 +7,17 @@ signal outfit_changed
 @export var shirts : InventorySlot
 @export var helds : InventorySlot
 
+func get_accessory(type):
+	match type:
+		BaseAccessory.AccessoryType.Hat:
+			return hats.get_current()
+		BaseAccessory.AccessoryType.Shirt:
+			return shirts.get_current()
+		BaseAccessory.AccessoryType.Held:
+			return helds.get_current()
+		_: 
+			return null
+
 func set_accessory(type, idx):
 	match type:
 		BaseAccessory.AccessoryType.Hat:

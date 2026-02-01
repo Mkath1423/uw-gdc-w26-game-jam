@@ -1,39 +1,25 @@
 class_name Person extends Node2D
 
-@export var head_anchor : Node2D
-@export var hair_anchor : Node2D
-@export var hat_anchor : Node2D
 
-@export var shirt_anchor : Node2D
-@export var hold_anchor : Node2D
-
-@export var neck_anchor : Node2D
 @export var neck : Line2D
 
 @export var animation_player : AnimationPlayer
 
+@onready var hair_front : Sprite2D = $visuals/head_front/hair_front
+@onready var hair_back : Sprite2D = $visuals/head_back/hair_back
+@onready var shirt : Sprite2D = $visuals/body/shirt
+@onready var held : Sprite2D = $visuals/body/held
+@onready var head : Sprite2D = $visuals/head_front/head
+@onready var hat : Sprite2D = $visuals/head_front/hat
 
-func _replace(anchor : Node2D, with : PackedScene):
-	for c in anchor.get_children():
-		c.queue_free()
+@onready var head_front : Node2D = $visuals/head_front
+@onready var head_back : Node2D = $visuals/head_back
 
-	anchor.add_child(with.instantiate())
+func set_accessory(acc: Accessory):
+	if acc == null:
+		return
 	
-func set_accessory(accessory : BaseAccessory):
-	match accessory.get_type():
-		BaseAccessory.AccessoryType.Hair:
-			_replace(hair_anchor, accessory.get_prefab())
-
-		BaseAccessory.AccessoryType.Hat:
-			_replace(hat_anchor, accessory.get_prefab())
-
-		BaseAccessory.AccessoryType.Shirt:
-			_replace(shirt_anchor, accessory.get_prefab())
-
-		BaseAccessory.AccessoryType.Held:
-			_replace(hold_anchor, accessory.get_prefab())
-		_:
-			pass
+	acc.apply_accessory(self)
 
 func set_animation_walking():
 	animation_player.play("walk")
@@ -44,3 +30,9 @@ func set_animation_idle():
 
 func clear_animation():
 	animation_player.stop()
+	
+func _process(_delta):
+	head_back.position = head_front.position
+	head_back.rotation = head_front.rotation
+
+	
